@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import axios from 'axios';
 import './MarketingSite.css';
 
-const LiveChat = () => {
+const EasyPurchases = () => {
     let content = { marginTop: "70px" }
     return (
         <div className="container">
             <div className="row">
                 <div className="col-md-2" />
-                <div className="col-md-4" style={content}>
-                    <h2>Live Chat With a Stylist</h2>
-                    <p>Get all the fashion advice you've ever wanted from the comfort of your home. With a premium account, you can access a live stylist to discuss in app purchases!</p>
-                </div>
                 <div className="col-md-4">
                     <img id="chat-image" src="images/LiveChat.jpg" />
+                </div>
+                <div className="col-md-4" style={content}>
+                    <h2>Make Easy Purchases</h2>
+                    <p>See something you love? Be able to make a purchase with the click of a button from within our app!</p>
                 </div>
                 <div className="col-md-2" />
             </div>
@@ -21,4 +21,4 @@ const LiveChat = () => {
     )
 }
 
-export default LiveChat;
+export default EasyPurchases; 
