@@ -1,5 +1,7 @@
+import React from 'react';
 import axios from 'axios';
 import './MarketingSite.css';
+
 
 const EasyPurchases = () => {
     let content = { marginTop: "120px" }
