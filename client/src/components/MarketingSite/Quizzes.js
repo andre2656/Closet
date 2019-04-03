@@ -1,10 +1,11 @@
+    
 import React, { Component } from "react";
 import axios from 'axios';
 import './MarketingSite.css';
 
 const Quizzes = () => {
-    let content = { marginTop: "80px" }
-    let padding = { paddingBottom: "30px" }
+    let content = { marginTop: "140px" }
+    let padding = { paddingBottm: "30px" }
     return(
         <div className="container">
             <div className="row">
