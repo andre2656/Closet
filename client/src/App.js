@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import MotivationalQuote from "./components/MotivationalQuote";
 import logo from "./logo.svg";
-import MarketingSite from "./components/MarketingSite/MarketingSite"
 import "./App.css";
 
 /**
@@ -11,7 +10,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MarketingSite/>
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>YOU'RE GONNA TURN THIS BAREBONES BOILERPLATE INTO SOMETHING AMAZING!</h2>
+        </div>
+        <p className="App-intro">
+          <MotivationalQuote />
+        </p>
       </div>
     );
   }
