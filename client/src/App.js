@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import MotivationalQuote from "./components/MotivationalQuote";
 import logo from "./logo.svg";
 import MarketingSite from "./components/MarketingSite/MarketingSite"
 import "./App.css";
