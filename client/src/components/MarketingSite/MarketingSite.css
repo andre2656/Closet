@@ -1,12 +1,21 @@
-h1 {
-
+#pins-image {
+    margin-top: 30px;
 }
 
 #quiz-image {
     width: 350px;
     height: 350px;
+    margin-top: 60px;
 }
 
 #chat-image {
     margin-top: 50px;
+    width: 450px;
 }
+
+#shop-image {
+    width: 420px;
+    margin-top: 70px;
+    padding-right: 50px;
+}
+
