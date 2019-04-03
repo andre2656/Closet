@@ -1,7 +1,7 @@
 
 import React, { Component } from "react";
 import axios from 'axios';
-import NavBar from '../NavBar';
+import NavBar from '../NavBar/NavBar';
 import Intro from './Intro';
 import PopularPins from './PopularPins';
 import Quizzes from './Quizzes';
@@ -9,7 +9,7 @@ import EasyPurchases from './EasyPurchases';
 import LiveChat from './LiveChat';
 import GetStarted from './GetStarted';
 
-class marketingSite extends Component {
+class MarketingSite extends Component {
     state = {
         loggedIn: false
     };
@@ -28,4 +28,4 @@ class marketingSite extends Component {
     }
 }
 
-export default marketingSite;
+export default MarketingSite;
