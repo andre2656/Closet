@@ -4,7 +4,6 @@ import NavBar from '../NavBar/NavBar';
 import { Link } from 'react-router-dom';
 import './SignUp.css';
 
-
 class SignUp extends Component {
     state = {
         firstName: '',
