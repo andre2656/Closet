@@ -23,22 +23,30 @@ class SignUp extends Component {
                             <h2>Get Started for Free or Level Up With Premium</h2>
                             <p>With a free Closet account, you can take quizzes and access personalized fashion pins to help cultivate your perfect look. With premium, you enjoy all the great features of a free account, but with access to a stylist who's available to chat at any time along with buy-now buttons to make in-app purchases!</p>
                             <br />
-                            <form className="px-4 py-3">
-                                <div className="form-group">
-                                    <label className="sign-up-label" for="firstName">First Name</label>
-                                    <input type="text" className="form-control sign-up-input" id="firstName" placeholder="" />
+                            <form>
+                                <div className="form-group row">
+                                    <label for="firstName" className="col-sm-3 col-form-label">First Name</label>
+                                    <div className="col-sm-9">
+                                        <input type="text" className="form-control" id="firstName" placeholder="" />
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label className="sign-up-label" for="lastName">Last Name</label>
-                                    <input type="text" className="form-control sign-up-input" id="lastName" placeholder="" />
+                                <div class="form-group row">
+                                    <label for="lastName" className="col-sm-3 col-form-label" >Last Name</label>
+                                    <div className="col-sm-9">
+                                        <input type="text" className="form-control" id="lastName" placeholder="" />
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label className="sign-up-label" for="email">Email</label>
-                                    <input type="email" className="form-control sign-up-input" id="email" placeholder="" />
+                                <div class="form-group row">
+                                    <label for="email" className="col-sm-3 col-form-label">Email</label>
+                                    <div className="col-sm-9">
+                                        <input type="email" className="form-control" id="email" placeholder="" />
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label className="sign-up-label" for="password">Password</label>
-                                    <input type="password" className="form-control sign-up-input" id="password" placeholder="" />
+                                <div class="form-group row">
+                                    <label for="password" className="col-sm-3 col-form-label">Password</label>
+                                    <div className="col-sm-9">
+                                        <input type="password" className="form-control" id="password" placeholder="" />
+                                    </div>
                                 </div>
                                 <div className="col-md-2" />
                                 <br />

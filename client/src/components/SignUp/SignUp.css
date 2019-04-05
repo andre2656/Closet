@@ -1,11 +1,11 @@
-.sign-up-input {
-    width: 300px;
-    margin: auto;
-    margin-left: 300px;
-    padding: 5px;
-    margin-top: -40px;
-  }
+@media(max-width:992px){
+    .sign-up-button {
+        width: 150px;
+    }
+}
 
-.sign-up-label {
-    margin-left: -300px;
+@media(max-width:767px){
+    .sign-up-button {
+        margin-bottom: 15px;
+    }
 }
