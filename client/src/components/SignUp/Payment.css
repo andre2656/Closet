@@ -1,0 +1,46 @@
+.card-image {
+    margin: 10px;
+}
+
+@media(max-width:767px){
+    #payment-btn {
+        margin-right: 30px;
+    }
+
+    #cvv {
+        margin-top: 10px;
+    }
+
+    #number {
+        margin-top: -20px;
+    }
+
+    #month {
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+
+    #year {
+        margin-bottom: 10px;
+    }
+     
+    #images {
+        margin-left: 150px;
+    }
+
+
+    .card-image {
+        margin-left: 75px;
+    }
+
+}
+
+@media(max-width:450px){
+    .payment-input {
+        width: 360px;
+    }
+
+    .card-image {
+        margin-left: 50px;
+    }
+}
