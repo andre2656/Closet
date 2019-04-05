@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import NavBar from '../NavBar/NavBar';
-import './SignUp.css';
+import {Link} from 'react-router-dom';
+
 
 class SignUp extends Component {
     state = {
@@ -37,7 +38,7 @@ class SignUp extends Component {
                                     <label for="password">Password</label>
                                     <input type="password" class="form-control" id="password" placeholder="" />
                                 </div>
-                            <button type="submit" class="btn btn-dark">Sign Up for Free</button>
+                                <Link className="sign-up-for-free" to="/app"><button type="button" className="btn btn-dark">Sign Up for Free</button></Link>
                             </form>
                         </div>
 
@@ -61,7 +62,7 @@ class SignUp extends Component {
                                     <label for="password">Password</label>
                                     <input type="password" class="form-control" id="password" placeholder="" />
                                 </div>
-                            <button type="submit" class="btn btn-dark">Unlock Premium</button>
+                                <Link className="unlock-premium" to="/payment"><button type="button" className="btn btn-dark">Unlock Premium</button></Link>
                             </form>
                         </div>
                         <div className="col-md-2" />
