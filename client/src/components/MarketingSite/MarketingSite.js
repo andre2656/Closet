@@ -17,13 +17,13 @@ class MarketingSite extends Component {
     render() {
         return (
             <div>
-                <NavBar/>
-                <Intro/>
-                <PopularPins/>
-                <Quizzes/>
-                <EasyPurchases/>
-                <LiveChat/>
-                <GetStarted/>
+                <NavBar />
+                <Intro />
+                <PopularPins />
+                <Quizzes />
+                <EasyPurchases />
+                <LiveChat />
+                <GetStarted />
             </div>
         );
     }

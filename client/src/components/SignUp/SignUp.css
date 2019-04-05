@@ -1,0 +1,11 @@
+.sign-up-input {
+    width: 300px;
+    margin: auto;
+    margin-left: 300px;
+    padding: 5px;
+    margin-top: -40px;
+  }
+
+.sign-up-label {
+    margin-left: -300px;
+}
