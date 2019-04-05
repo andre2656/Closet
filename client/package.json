@@ -17,6 +17,10 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "engines": {
+    "node": "11.6.0",
+    "npm": "6.6.0"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
