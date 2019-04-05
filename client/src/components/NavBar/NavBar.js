@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import "../styles/Navbar.css";
+import {Link} from 'react-router-dom';
 
 
 class NavBar extends Component {
@@ -17,7 +17,7 @@ class NavBar extends Component {
                 <div className="col-md-7"/>
                 <div className="col-md-2"><input type="email" className="form-control" id="exampleDropdownFormEmail1" placeholder="Email" /></div>
                 <div className="col-md-1"><input type="password" className="form-control" id="exampleDropdownFormPassword1" placeholder="Password" /></div>
-                <button type="submit" className="btn btn-dark">Sign in</button>
+                <Link className="sign-in" to="/app"><button type="button" className="btn btn-dark">Sign in</button></Link>
                 <div className="col-md-2"/>
            </div>
          </div>

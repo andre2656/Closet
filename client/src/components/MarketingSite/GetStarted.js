@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
+import {Link} from 'react-router-dom';
+
 
 const GetStarted = () => {
     let content = { marginTop: "80px" }
@@ -18,10 +20,10 @@ const GetStarted = () => {
             <div className="row">
                 <div className="col-md-3" />
                 <div className="col-md-3">
-                    <button type="button" className="btn btn-dark">Get started with a FREE account</button>
+                <Link className="get-started-now" to="/sign-up"><button type="button" className="btn btn-dark">Get started with a FREE account</button></Link>
                 </div>
                 <div className="col-md-3">
-                    <button type="button" className="btn btn-dark">Upgrade to Premium Styling</button>
+                <Link className="get-started-now" to="/sign-up"><button type="button" className="btn btn-dark">Upgrade to Premium Styling</button></Link>
                 </div>
                 <div className="col-md-3" style={padding}/>
             </div>

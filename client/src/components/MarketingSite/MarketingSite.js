@@ -8,6 +8,7 @@ import Quizzes from './Quizzes';
 import EasyPurchases from './EasyPurchases';
 import LiveChat from './LiveChat';
 import GetStarted from './GetStarted';
+import './MarketingSite.css';
 
 class MarketingSite extends Component {
     state = {
