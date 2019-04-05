@@ -14,7 +14,7 @@ const LiveChat = () => {
                     <p>Get all the fashion advice you've ever wanted from the comfort of your home. With a premium account, you can access a live stylist to discuss in app purchases!</p>
                 </div>
                 <div className="col-md-4">
-                    <img id="chat-image" src="images/stylist.jpg"/>
+                    <img id="chat-image" src="images/stylist.jpg" />
                 </div>
                 <div className="col-md-2" />
             </div>
