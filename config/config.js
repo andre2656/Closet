@@ -11,14 +11,14 @@ module.exports = {
   "test": {
     "username": "root",
     "password": null,
-    "database": "motivation_test",
+    "database": "Users_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "motivation_production",
+    "database": "Users_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const motivationRoutes = require("./motivation");
+// const motivationRoutes = require("./motivation");
 
 /**
  * API routes 
@@ -12,6 +12,6 @@ const motivationRoutes = require("./motivation");
  */
 
 // contains routes for `/api/motivation/`
-router.use("/motivation", motivationRoutes);
+// router.use("/motivation", motivationRoutes);
 
 module.exports = router;
