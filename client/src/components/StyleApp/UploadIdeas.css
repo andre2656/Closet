@@ -1,0 +1,7 @@
+#uploadCard{
+    width: 90%;
+    margin: 2.5%;
+}
+input[type="file"] {
+    display: none;
+}
