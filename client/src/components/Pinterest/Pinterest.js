@@ -9,6 +9,24 @@ export function PinterestList({ children }) {
     return <ul className="list-group">{children}</ul>;
 }
 
+
+var params = {
+    fields: 'id,note,link,image'
+};
+
+var pins = [];
+PDK.request('/boards/<board_id>/pins/', function (response) { // Make sure to change the board_id
+    if (!response || response.error) {
+        alert('Error occurred');
+    } else {
+        pins = pins.concat(response.data);
+        console.log(response.data)
+        if (response.hasNext) {
+            response.next(); // this will recursively go to this same callback
+        }
+    }
+});
+
 // PinterestListItem renders a bootstrap list item containing data from the recipe api call
 export function PinterestListItem(props) {
     return (
