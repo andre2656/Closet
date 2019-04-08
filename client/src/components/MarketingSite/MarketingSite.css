@@ -13,8 +13,7 @@
     width: 400px;
 }
 
-#shop-image {
-    width: 420px;
+#shop-image { 
+    height: 230px;
     margin-top: 70px;
-    padding-right: 50px;
 }

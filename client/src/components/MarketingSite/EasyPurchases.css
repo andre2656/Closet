@@ -1,0 +1,16 @@
+@media(max-width:769px){
+    #shop-text {
+        order: 2
+    }
+
+    #shop-image {
+        order: 1;
+
+    }
+
+    img.center {
+        display: block;
+        margin: 0 auto;
+    }
+
+}
