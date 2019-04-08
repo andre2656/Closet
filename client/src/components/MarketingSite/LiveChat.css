@@ -1,0 +1,11 @@
+@media(max-width:763px){
+    #chat-text {
+        order: 2
+    }
+
+    #chat-image {
+        order: 1;
+        padding-bottom: -50px;
+    }
+
+}

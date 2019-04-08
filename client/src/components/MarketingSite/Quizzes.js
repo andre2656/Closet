@@ -2,15 +2,16 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import './MarketingSite.css';
+import './Quizzes.css';
 
 const Quizzes = () => {
     let content = { marginTop: "140px" }
     let padding = { paddingBottm: "30px" }
     return (
-        <div className="container">
+        <div className="container flex-container">
             <div className="row">
                 <div className="col-md-2" />
-                <div className="col-md-4" style={content}>
+                <div className="col-md-4" id="quiz-text" style={content}>
                     <h2>Have Fun With Quizzes</h2>
                     <p>Take quick quizzes to hone in on your dream style and adjust your preferences to see fashion that speaks to you.</p>
                 </div>

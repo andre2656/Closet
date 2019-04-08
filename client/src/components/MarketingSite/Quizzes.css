@@ -1,0 +1,11 @@
+@media(max-width:763px){
+    #quiz-text {
+        order: 2
+    }
+
+    #quiz-image {
+        order: 1;
+        padding-bottom: -50px;
+    }
+
+}
