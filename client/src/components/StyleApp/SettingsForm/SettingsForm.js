@@ -66,7 +66,6 @@ class SettingsForm extends Component {
                                         <option>White</option>
                                         <option>Grey</option>
                                         <option>Black</option>
-                                        <option>Other</option>
                                     </select>
                                     </div>
                                 </div>
@@ -83,7 +82,6 @@ class SettingsForm extends Component {
                                         <option>Vintage</option>
                                         <option>Bohemian</option>
                                         <option>Sophisticated</option>
-                                        <option>Other</option>
                                     </select>
                                     </div>
                                 </div>
@@ -96,8 +94,6 @@ class SettingsForm extends Component {
                                         <option>Ecclectic</option>
                                         <option>Confused</option>
                                         <option>Cohesive</option>
-                                        <option>Bohemian</option>
-                                        <option>Other</option>
                                     </select>
                                     </div>
                                 </div>
