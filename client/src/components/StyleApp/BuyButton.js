@@ -8,15 +8,15 @@ class BuyButton extends Component {
     };
 
     enableButton = () => {
-        const isPremium = User.Premium;
+        const isPremium = this.User.premium;
     }
 
     render() {
         return (
             <div>
                 {isPremium
-                    ? <img src="images/enabled.png" />
-                    : <img src="images/disabled.png" />}
+                    ? <img src="images/enabled-buy-button.png" />
+                    : <img src="images/disabled-buy-button.png" />}
             </div>
         );
     }
