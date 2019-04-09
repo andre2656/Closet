@@ -60,7 +60,7 @@ class SettingsForm extends Component {
                             <br />
                             <form>
                                 <div className="form-group row">
-                                    <label for="question1" className="col-sm-6 col-form-label">How old are you?</label>
+                                    <label name="question1" className="col-sm-6 col-form-label">How old are you?</label>
                                     <div className="col-sm-6">
                                     <select className="form-control" id="question1" onChange= {this.handleAge}>
                                         <option selected disabled hidden>Select an Option</option>
@@ -77,7 +77,7 @@ class SettingsForm extends Component {
                                 </div>
 
                                 <div className="form-group row">
-                                    <label for="question2" className="col-sm-6 col-form-label">What's your ethnicity?</label>
+                                    <label name="question2" className="col-sm-6 col-form-label">What's your ethnicity?</label>
                                     <div className="col-sm-6">
                                     <select className="form-control" id="question2">
                                         <option selected disabled hidden>Select an Option</option>
@@ -93,7 +93,7 @@ class SettingsForm extends Component {
                                 </div>
 
                                 <div className="form-group row">
-                                    <label for="question3" className="col-sm-6 col-form-label">What's your hair color?</label>
+                                    <label name="question3" className="col-sm-6 col-form-label">What's your hair color?</label>
                                     <div className="col-sm-6">
                                     <select className="form-control" id="question3">
                                         <option selected disabled hidden>Select an Option</option>
@@ -108,7 +108,7 @@ class SettingsForm extends Component {
                                 </div>
 
                                 <div className="form-group row">
-                                    <label for="question4" className="col-sm-6 col-form-label">What style do you like on others?</label>
+                                    <label name="question4" className="col-sm-6 col-form-label">What style do you like on others?</label>
                                     <div className="col-sm-6">
                                     <select className="form-control" id="question4">
                                         <option selected disabled hidden>Select an Option</option>
@@ -124,7 +124,7 @@ class SettingsForm extends Component {
                                 </div>
 
                                 <div className="form-group row">
-                                    <label for="question5" className="col-sm-6 col-form-label">What's your wardrobe like?</label>
+                                    <label name="question5" className="col-sm-6 col-form-label">What's your wardrobe like?</label>
                                     <div className="col-sm-6">
                                     <select className="form-control" id="question5">
                                         <option selected disabled hidden>Select an Option</option>
@@ -135,7 +135,7 @@ class SettingsForm extends Component {
                                     </div>
                                 </div>
                                 <br />
-                                <Link className="submit" to="/app"><button type="button" className="btn btn-dark">Submit</button></Link>
+                                <Link className="submit" to="/app"><button type="button" className="btn btn-dark" onClick={this.submit}>Submit</button></Link>
                                 <div className="col-md-2" />
                             </form>
                         </div>
