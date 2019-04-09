@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import './CuratedLooks.css';
-// import './BuyButton.js';
+import './BuyButton.js';
 
 
 class CuratedLooks extends Component {
