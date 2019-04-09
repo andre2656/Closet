@@ -3,20 +3,26 @@ import { Link } from 'react-router-dom';
 import { userInfo } from "os";
 
 class BuyButton extends Component {
-    state = {
-        enableButton: false
-    };
+  EnabledButton = (props) => {
+    return <img src="images/enabled-buy-button.png" />
+  }
 
-    enableButton = () => {
-        const isPremium = this.User.premium;
-    }
+  DisabledButton = (props) => {
+      return <img src="images/disabled-buy-button.png" />
+  }
+
+  ButtonType = (props) => {
+      const isPremium = props.User.premium;
+      if (isPremium) {
+          return <EnabledButton/>
+      }
+        return <DisabledButton/>
+  }
 
     render() {
         return (
             <div>
-                {isPremium
-                    ? <img src="images/enabled-buy-button.png" />
-                    : <img src="images/disabled-buy-button.png" />}
+                <ButtonType/>
             </div>
         );
     }
