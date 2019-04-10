@@ -15,6 +15,9 @@ class SettingsForm extends Component {
 
     handleAge = (event) => {
         this.setState({ age: event.target.value })
+    };
+    handleAge = (event) => {
+        this.setState({age: event.target.value})
     }
     handleEthnicity = (event) => {
         this.setState({ ethnicity: event.target.value })
@@ -55,6 +58,8 @@ class SettingsForm extends Component {
             this.signup();
         }
     }
+
+
     render() {
         return (
             <div>
@@ -67,7 +72,7 @@ class SettingsForm extends Component {
                             <br />
                             <form>
                                 <div className="form-group row">
-                                    <label for="question1" className="col-sm-6 col-form-label">How old are you?</label>
+                                    <label name="question1" className="col-sm-6 col-form-label">How old are you?</label>
                                     <div className="col-sm-6">
                                         <select className="form-control" id="question1" onChange={this.handleAge}>
                                             <option selected disabled hidden>Select an Option</option>
@@ -79,12 +84,12 @@ class SettingsForm extends Component {
                                             <option>61-68</option>
                                             <option>68-74</option>
                                             <option>75+</option>
-                                        </select>
-                                    </div>
+                                    </select>
+                                  </div>
                                 </div>
 
                                 <div className="form-group row">
-                                    <label for="question2" className="col-sm-6 col-form-label">What's your ethnicity?</label>
+                                    <label name="question2" className="col-sm-6 col-form-label">What's your ethnicity?</label>
                                     <div className="col-sm-6">
                                         <select className="form-control" id="question2" onChange={this.handleEthnicity}>
                                             <option selected disabled hidden>Select an Option</option>
@@ -95,12 +100,12 @@ class SettingsForm extends Component {
                                             <option>Native Hawaiian or Other Pacific Islander</option>
                                             <option>Hispanic</option>
                                             <option>Other</option>
-                                        </select>
+                                    </select>
                                     </div>
                                 </div>
 
                                 <div className="form-group row">
-                                    <label for="question3" className="col-sm-6 col-form-label">What's your hair color?</label>
+                                    <label name="question3" className="col-sm-6 col-form-label">What's your hair color?</label>
                                     <div className="col-sm-6">
                                         <select className="form-control" id="question3" onChange={this.handleHairColor}>
                                             <option selected disabled hidden>Select an Option</option>
@@ -115,7 +120,7 @@ class SettingsForm extends Component {
                                 </div>
 
                                 <div className="form-group row">
-                                    <label for="question4" className="col-sm-6 col-form-label">What style do you like on others?</label>
+                                    <label name="question4" className="col-sm-6 col-form-label">What style do you like on others?</label>
                                     <div className="col-sm-6">
                                         <select className="form-control" id="question4" onChange={this.handleStyle}>
                                             <option selected disabled hidden>Select an Option</option>
@@ -131,7 +136,7 @@ class SettingsForm extends Component {
                                 </div>
 
                                 <div className="form-group row">
-                                    <label for="question5" className="col-sm-6 col-form-label">What's your wardrobe like?</label>
+                                    <label name="question5" className="col-sm-6 col-form-label">What's your wardrobe like?</label>
                                     <div className="col-sm-6">
                                         <select className="form-control" id="question5" onChange={this.handleWardrobe}>
                                             <option selected disabled hidden>Select an Option</option>
