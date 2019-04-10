@@ -6,14 +6,17 @@ import { Link } from 'react-router-dom';
 class SettingsForm extends Component {
     state = {
         email: '',
-        age: '',
-        ethnicity: '',
-        hairColor: '',
-        style: '',
-        wardrobe: ''
+        age: null,
+        ethnicity: null,
+        hairColor: null,
+        style: null,
+        wardrobe: null
+    };
+
+    handleAge = (event) => {
+        this.setState({ age: event.target.value })
     };
     handleAge = (event) => {
-        console.log('age changes: ' + event.target.value);
         this.setState({age: event.target.value})
     }
     handleEthnicity = (event) => {
@@ -29,10 +32,9 @@ class SettingsForm extends Component {
         this.setState({ wardrobe: event.target.value })
     }
 
-
     signup() {
         axios.post('api/set/settings', {
-            email: this.state.email, 
+            email: this.state.email,
             age: this.state.age,
             ethnicity: this.state.ethnicity,
             hairColor: this.state.hairColor,
@@ -45,6 +47,16 @@ class SettingsForm extends Component {
             .catch(function (error) {
                 console.log(error);
             });
+    }
+
+    InputValidation = (event) => {
+        console.log(this.state);
+        event.preventDefault();
+        if (this.state.age == null || this.state.ethnicity == null || this.state.hairColor == null || this.state.style == null || this.state.wardrobe == null) {
+            alert("Please fill out all fields before submitting.");
+        } else {
+            this.signup();
+        }
     }
 
 
@@ -62,32 +74,32 @@ class SettingsForm extends Component {
                                 <div className="form-group row">
                                     <label name="question1" className="col-sm-6 col-form-label">How old are you?</label>
                                     <div className="col-sm-6">
-                                    <select className="form-control" id="question1" onChange= {this.handleAge}>
-                                        <option selected disabled hidden>Select an Option</option>
-                                        <option>18-25</option>
-                                        <option>26-34</option>
-                                        <option>35-44</option>
-                                        <option>45-52</option>
-                                        <option>53-60</option>
-                                        <option>61-68</option>
-                                        <option>68-74</option>
-                                        <option>75+</option>
+                                        <select className="form-control" id="question1" onChange={this.handleAge}>
+                                            <option selected disabled hidden>Select an Option</option>
+                                            <option>18-25</option>
+                                            <option>26-34</option>
+                                            <option>35-44</option>
+                                            <option>45-52</option>
+                                            <option>53-60</option>
+                                            <option>61-68</option>
+                                            <option>68-74</option>
+                                            <option>75+</option>
                                     </select>
-                                    </div>
+                                  </div>
                                 </div>
 
                                 <div className="form-group row">
                                     <label name="question2" className="col-sm-6 col-form-label">What's your ethnicity?</label>
                                     <div className="col-sm-6">
                                         <select className="form-control" id="question2" onChange={this.handleEthnicity}>
-                                        <option selected disabled hidden>Select an Option</option>
-                                        <option>White</option>
-                                        <option>Black or African American</option>
-                                        <option>Asian</option>
-                                        <option>American Indian</option>
-                                        <option>Native Hawaiian or Other Pacific Islander</option>
-                                        <option>Hispanic</option>
-                                        <option>Other</option>
+                                            <option selected disabled hidden>Select an Option</option>
+                                            <option>White</option>
+                                            <option>Black or African American</option>
+                                            <option>Asian</option>
+                                            <option>American Indian</option>
+                                            <option>Native Hawaiian or Other Pacific Islander</option>
+                                            <option>Hispanic</option>
+                                            <option>Other</option>
                                     </select>
                                     </div>
                                 </div>
@@ -95,53 +107,53 @@ class SettingsForm extends Component {
                                 <div className="form-group row">
                                     <label name="question3" className="col-sm-6 col-form-label">What's your hair color?</label>
                                     <div className="col-sm-6">
-                                    <select className="form-control" id="question3">
-                                        <option selected disabled hidden>Select an Option</option>
-                                        <option>Blonde</option>
-                                        <option>Red</option>
-                                        <option>Brunette</option>
-                                        <option>White</option>
-                                        <option>Grey</option>
-                                        <option>Black</option>
-                                    </select>
+                                        <select className="form-control" id="question3" onChange={this.handleHairColor}>
+                                            <option selected disabled hidden>Select an Option</option>
+                                            <option>Blonde</option>
+                                            <option>Red</option>
+                                            <option>Brunette</option>
+                                            <option>White</option>
+                                            <option>Grey</option>
+                                            <option>Black</option>
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div className="form-group row">
                                     <label name="question4" className="col-sm-6 col-form-label">What style do you like on others?</label>
                                     <div className="col-sm-6">
-                                    <select className="form-control" id="question4">
-                                        <option selected disabled hidden>Select an Option</option>
-                                        <option>Chic</option>
-                                        <option>Tomboy</option>
-                                        <option>Street</option>
-                                        <option>Preppy</option>
-                                        <option>Vintage</option>
-                                        <option>Bohemian</option>
-                                        <option>Sophisticated</option>
-                                    </select>
+                                        <select className="form-control" id="question4" onChange={this.handleStyle}>
+                                            <option selected disabled hidden>Select an Option</option>
+                                            <option>Chic</option>
+                                            <option>Tomboy</option>
+                                            <option>Street</option>
+                                            <option>Preppy</option>
+                                            <option>Vintage</option>
+                                            <option>Bohemian</option>
+                                            <option>Sophisticated</option>
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div className="form-group row">
                                     <label name="question5" className="col-sm-6 col-form-label">What's your wardrobe like?</label>
                                     <div className="col-sm-6">
-                                    <select className="form-control" id="question5">
-                                        <option selected disabled hidden>Select an Option</option>
-                                        <option>Ecclectic</option>
-                                        <option>Confused</option>
-                                        <option>Cohesive</option>
-                                    </select>
+                                        <select className="form-control" id="question5" onChange={this.handleWardrobe}>
+                                            <option selected disabled hidden>Select an Option</option>
+                                            <option>Ecclectic</option>
+                                            <option>Confused</option>
+                                            <option>Cohesive</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <br />
-                                <Link className="submit" to="/app"><button type="button" className="btn btn-dark" onClick={this.submit}>Submit</button></Link>
+                                <Link className="submit" to="/app"><button type="button" id="submitSettings" className="btn btn-dark" onClick={this.InputValidation}>Submit</button></Link>
                                 <div className="col-md-2" />
                             </form>
                         </div>
                     </div>
                 </div>
-            </div >
+            </div>
 
         );
     }
