@@ -11,6 +11,9 @@ class SignUp extends Component {
         email: '',
         password: ''
     };
+
+    
+
     render() {
         return (
             <div>
