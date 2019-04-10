@@ -26,7 +26,6 @@
     "if-env": "^1.0.4",
     "mysql2": "^1.6.5",
     "node-pinterest": "0.0.4",
-    "pinterest-api": "^1.1.4",
     "request-promise": "^4.2.4",
     "sequelize": "^5.2.6"
   },
