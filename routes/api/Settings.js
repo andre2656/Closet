@@ -11,6 +11,7 @@ router.post("/settings", (req, res) => {
         wardrobe: req.body.wardrobe,
     }).then(() => {
         console.log('settings added!')
+        res.json({message: "Settings Saved"});
     })
 })
 module.exports = router;
