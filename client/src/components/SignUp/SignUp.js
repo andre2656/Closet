@@ -25,6 +25,7 @@ class SignUp extends Component {
         this.setState({ lastName: event.target.value });
     };
 
+
     emailChanged = (event) => {
         this.setState({ email: event.target.value });
     }
@@ -65,6 +66,10 @@ class SignUp extends Component {
                 console.log(error);
             });
     }
+
+    
+
+
     render() {
         return (
             <div>
