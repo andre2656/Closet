@@ -7,6 +7,7 @@ import SignUp from './components/SignUp/SignUp';
 import StyleApp from './components/StyleApp/StyleApp';
 import SettingsForm from './components/StyleApp/SettingsForm/SettingsForm';
 import Payment from './components/SignUp/Payment';
+import Pinterest from './components/Pinterest/Pinterest';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path="/payment" component={Payment} />
           <Route exact path="/settings" component={SettingsForm} />
           <Route exact path="/app" component={StyleApp} />
+          <Route exact path="/pinterest" component={Pinterest} />
         </div>
       </Router>
     );

@@ -5,12 +5,10 @@ module.exports = (sequelize, DataTypes) => {
         lastName: DataTypes.STRING,
         email: DataTypes.STRING,
         password: DataTypes.STRING,
-        premium: DataTypes.BOOLEAN,
-        ageRange: DataTypes.STRING,
-        ethnicity: DataTypes.STRING,
-        hairColor: DataTypes.STRING,
-        style: DataTypes.STRING,
-        wardrobe: DataTypes.STRING,
+        premium: DataTypes.BOOLEAN
     }, {});
+    User.associate = function(models){
+
+    }
     return User;
 };

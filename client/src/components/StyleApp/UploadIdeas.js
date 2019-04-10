@@ -13,7 +13,7 @@ const UploadIdeas = () => {
                 <div className="card" id='uploadCard' >
                     <div className="card-header">Upload Your Outfit</div>
                     <div className="card-body">
-                        <label class="btn btn-dark btn-file"> Upload <input type="file" style={display} />
+                        <label className="btn btn-dark btn-file"> Upload <input type="file" style={display} />
                         </label>
                     </div>
                 </div >

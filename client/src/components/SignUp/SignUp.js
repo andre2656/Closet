@@ -4,15 +4,71 @@ import NavBar from '../NavBar/NavBar';
 import { Link } from 'react-router-dom';
 import './SignUp.css';
 
+
 class SignUp extends Component {
     state = {
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: ''
+                firstName: '',
+                lastName: '',
+                email: '',
+                password: '',
+                premium: false
+            };
+    componentDidMount(){
+        console.log('hello' + this.state.firstName)
+    }
+
+    firstNameChanged = (event) => {
+        this.setState({ firstName: event.target.value });
     };
 
+    lastNameChanged = (event) => {
+        this.setState({ lastName: event.target.value });
+    };
+
+
+    emailChanged = (event) => {
+        this.setState({ email: event.target.value });
+    }
+    passwordChanged = (event) => {
+        this.setState({ password: event.target.value });
+    }
+
+
+   handleClick = () => {
+       this.setState({
+           premium: false
+       });
+         this.signup();
+      
+    }
+
+        handlePremiumClick = () => {
+            this.setState({
+                premium: true
+            }).then(function () {
+                this.signup();
+            })
+    }
+
+    signup() {
+        console.log(this.state)
+        axios.post('api/Users/sign-up', {
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            email: this.state.email,
+            password: this.state.password,
+            premium: this.state.premium
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
     
+
 
     render() {
         return (
@@ -27,35 +83,35 @@ class SignUp extends Component {
                             <br />
                             <form>
                                 <div className="form-group row">
-                                    <label for="firstName" className="col-sm-3 col-form-label">First Name</label>
+                                    <label name="firstName" className="col-sm-3 col-form-label">First Name</label>
                                     <div className="col-sm-9">
-                                        <input type="text" className="form-control" id="firstName" placeholder="" />
+                                        <input type="text" className="form-control" id="firstName" placeholder="" onChange={this.firstNameChanged}/>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="lastName" className="col-sm-3 col-form-label" >Last Name</label>
+                                <div className="form-group row">
+                                    <label name="lastName" className="col-sm-3 col-form-label" >Last Name</label>
                                     <div className="col-sm-9">
-                                        <input type="text" className="form-control" id="lastName" placeholder="" />
+                                        <input type="text" className="form-control" id="lastName" placeholder="" onChange={this.lastNameChanged}/>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="email" className="col-sm-3 col-form-label">Email</label>
+                                <div className="form-group row">
+                                    <label name="email" className="col-sm-3 col-form-label">Email</label>
                                     <div className="col-sm-9">
-                                        <input type="email" className="form-control" id="email" placeholder="" />
+                                        <input type="email" className="form-control" id="email" placeholder="" onChange={this.emailChanged} />
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                                    <label for="password" className="col-sm-3 col-form-label">Password</label>
+                                <div className="form-group row">
+                                    <label name="password" className="col-sm-3 col-form-label">Password</label>
                                     <div className="col-sm-9">
-                                        <input type="password" className="form-control" id="password" placeholder="" />
+                                        <input type="password" className="form-control" id="password" placeholder="" onChange={this.passwordChanged}/>
                                     </div>
                                 </div>
                                 <div className="col-md-2" />
                                 <br />
                                 <div className="row">
                                     <div className="col-md-2" />
-                                    <div className="col-md-4"><Link className="sign-up-for-free" to="/settings"><button type="button" className="btn btn-dark sign-up-button">Sign Up for Free</button></Link></div>
-                                    <div className="col-md-4"><Link className="unlock-premium" to="/payment"><button type="button" className="btn btn-dark sign-up-button">Unlock Premium</button></Link></div>
+                                    <div className="col-md-4"><Link className="sign-up-for-free" to="/settings"><button type="button" onClick={this.handleClick} className="btn btn-dark sign-up-button">Sign Up for Free</button></Link></div>
+                                    <div className="col-md-4"><Link className="unlock-premium" to="/payment"><button type="button" onClick={this.handlePremiumClick} className="btn btn-dark sign-up-button">Unlock Premium</button></Link></div>
                                     <div className="col-md-2" />
                                 </div>
 
