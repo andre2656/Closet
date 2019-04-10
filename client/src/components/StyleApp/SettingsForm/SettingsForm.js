@@ -30,6 +30,7 @@ class SettingsForm extends Component {
     }
 
     signup() {
+        console.log("signing up");
         axios.post('api/set/settings', {
             email: this.state.email,
             age: this.state.age,
@@ -40,6 +41,7 @@ class SettingsForm extends Component {
         })
             .then(function (response) {
                 console.log(response);
+                window.location.pathname="/app";
             })
             .catch(function (error) {
                 console.log(error);
@@ -52,6 +54,7 @@ class SettingsForm extends Component {
         if (this.state.age == null || this.state.ethnicity == null || this.state.hairColor == null || this.state.style == null || this.state.wardrobe == null) {
             alert("Please fill out all fields before submitting.");
         } else {
+            console.log("trying to sign up");
             this.signup();
         }
     }
