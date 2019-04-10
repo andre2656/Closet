@@ -16,6 +16,8 @@ const Settings = require('./Settings')
 // contains routes for `/api/motivation/`
 // router.use("/motivation", motivationRoutes);
 router.use('/Users', User);
+
+
 router.use('/set', Settings);
 
 module.exports = router;

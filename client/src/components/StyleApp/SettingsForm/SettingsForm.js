@@ -79,7 +79,7 @@ class SettingsForm extends Component {
                                 <div className="form-group row">
                                     <label name="question2" className="col-sm-6 col-form-label">What's your ethnicity?</label>
                                     <div className="col-sm-6">
-                                    <select className="form-control" id="question2">
+                                        <select className="form-control" id="question2" onChange={this.handleEthnicity}>
                                         <option selected disabled hidden>Select an Option</option>
                                         <option>White</option>
                                         <option>Black or African American</option>

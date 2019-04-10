@@ -16,12 +16,6 @@ class SignUp extends Component {
     componentDidMount(){
         console.log('hello' + this.state.firstName)
     }
-    // handleChange(){
-    //     this.setState({ firstname: this.fistName.value });
-    //     console.log('hello ' + this.state.firstName)
-    // }
-
-
 
     firstNameChanged = (event) => {
         this.setState({ firstName: event.target.value });
@@ -54,7 +48,9 @@ class SignUp extends Component {
                 this.signup();
             })
     }
+
     signup() {
+        console.log(this.state)
         axios.post('api/Users/sign-up', {
             firstName: this.state.firstName,
             lastName: this.state.lastName,

@@ -13,3 +13,4 @@ router.post("/settings", (req, res) => {
         console.log('settings added!')
     })
 })
+module.exports = router;
