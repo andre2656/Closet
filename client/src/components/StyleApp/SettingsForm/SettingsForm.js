@@ -85,7 +85,6 @@ class SettingsForm extends Component {
                                         </select>
                                     </div>
                                 </div>
-
                                 <div className="form-group row">
                                     <label for="question2" className="col-sm-6 col-form-label">What's your ethnicity?</label>
                                     <div className="col-sm-6">
@@ -116,7 +115,6 @@ class SettingsForm extends Component {
                                         </select>
                                     </div>
                                 </div>
-
                                 <div className="form-group row">
                                     <label for="question4" className="col-sm-6 col-form-label">What style do you like on others?</label>
                                     <div className="col-sm-6">
@@ -132,7 +130,6 @@ class SettingsForm extends Component {
                                         </select>
                                     </div>
                                 </div>
-
                                 <div className="form-group row">
                                     <label for="question5" className="col-sm-6 col-form-label">What's your wardrobe like?</label>
                                     <div className="col-sm-6">
