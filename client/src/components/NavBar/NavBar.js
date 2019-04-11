@@ -30,7 +30,7 @@ class NavBar extends Component {
   InputValidation = (event) => {
     console.log(this.state);
     event.preventDefault();
-    if (this.state.email == '' || this.state.password == '') {
+    if (this.state.email === '' || this.state.password === '') {
       alert("Please fill out your email and password to log in.");
     } else {
       console.log("Trying to log in");
@@ -43,7 +43,7 @@ class NavBar extends Component {
       return <Redirect to="/app" />;
     }
     return (
-      <form>
+      <form onSubmit= {this.login}>
         <div className="form-group" id="sign-up-form">
           <div className="row">
             <div className="col-md-7" />
