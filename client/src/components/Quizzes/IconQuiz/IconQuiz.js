@@ -3,7 +3,7 @@ import update from 'react-addons-update';
 import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
-// import './IconQuiz.css';
+import './iconq.css';
  
 class IconQuiz extends Component {
  

@@ -3,7 +3,7 @@ import update from 'react-addons-update';
 import quizQuestions from './api/quizQuestions';
 import Quiz from './components/Quiz';
 import Result from './components/Result';
-// import './IconQuiz.css';
+import './fsq.css';
  
 class FashionStyleQuiz extends Component {
  

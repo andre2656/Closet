@@ -45,11 +45,11 @@ const FashionStyleQuiz = [
             },
             {
                 type: "Trendy",
-                content: "Trendy fashion leggings, latest tunic top or dress, chunky gladiator 4-inch heels"
+                content: "Trendy fashion leggings,  chunky gladiator 4-inch heels"
             },
             {
                 type: "Dramatic",
-                content: "Fitted one shoulder dress with darted sleeve, statement necklace, cuff bracelet and a pair of designer pump shoes"
+                content: "Fitted one shoulder dress with darted sleeve, statement necklaces"
             },
             {
                 type: "Sporty",
@@ -57,19 +57,19 @@ const FashionStyleQuiz = [
             },
             {
                 type: "Romantic",
-                content: "Long floral print dress with ruffles, pearl drop earrings, charm bracelet and a pair of sequined sandals"
+                content: "Long floral print dress with ruffles, pearl drop earrings, sequined sandals"
             },
             {
                 type: "Dramatic",
-                content: "Print dress, bold and eye-popping jacket on top and multi colored jewelery. Whatever strikes your mood"
+                content: "Print dress, bold and eye-popping jacket on top and multi colored jewelery"
             },
             {
                 type: "Bohemian",
-                content: "Flowy paisley print-dress or anything ethnic patterns, cowboy slouch boots, layers of exotic jewelry in gold or silver"
+                content: "Flowy paisley print-dress or anything ethnic patterns, layers of exotic jewelry"
             },
             {
                 type: "Urban",
-                content: "Cropped leather jacket, black skinny jeans, bold and bright colored top, studded platform shoes"
+                content: "Cropped leather jacket, black skinny jeans, bold and bright colored top"
             }
         ]
     },
