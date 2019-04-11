@@ -10,8 +10,31 @@ import Payment from './components/SignUp/Payment';
 import Pinterest from './components/Pinterest/Pinterest';
 import IconQuiz from './components/Quizzes/IconQuiz/IconQuiz';
 import FashionStyleQuiz from './components/Quizzes/FashionStyleQuiz/FashionStyleQuiz'
+import loginController from "./controllers/LoginController"
 
 class App extends Component {
+
+  state = { user: null }
+
+  componentDidMount() {
+    console.log("componentDidMount");
+    loginController.addUserChangedListener(this.setUser);
+
+    loginController.recheckLogin();
+  }
+
+  componentWillUnmount() {
+    console.log("WillUnmount");
+    loginController.removeUserChangedListener(this.setUser);
+  }
+
+  setUser = (user) => {
+    console.log("setUser", user);
+    this.setState({ user: user });
+  }
+
+
+
   render() {
     return (
       <Router>

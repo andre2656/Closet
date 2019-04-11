@@ -2,7 +2,7 @@ const db = require("../models");
 
 module.exports = {
     createPayment: function (req, res) {
-        db.Users.Create({
+        db.Payment.Create({
             cardholderName: req.body.cardholderName,
             cvv: req.body.cvv,
             cardNumber: req.body.cardNumber,
