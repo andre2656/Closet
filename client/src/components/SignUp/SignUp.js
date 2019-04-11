@@ -68,7 +68,7 @@ class SignUp extends Component {
     InputValidation = (event) => {
         console.log(this.state);
         event.preventDefault();
-        if (this.state.firstName == '' || this.state.lastName == '' || this.state.email == '' || this.state.password == '') {
+        if (this.state.firstName === '' || this.state.lastName === '' || this.state.email === '' || this.state.password === '') {
             alert("Please fill out all fields before submitting.");
         } else {
             console.log("Trying to sign up");

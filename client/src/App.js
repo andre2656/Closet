@@ -12,6 +12,7 @@ import IconQuiz from './components/Quizzes/IconQuiz/IconQuiz';
 import FashionStyleQuiz from './components/Quizzes/FashionStyleQuiz/FashionStyleQuiz'
 import loginController from "./controllers/LoginController"
 
+
 class App extends Component {
 
   state = { user: null }
