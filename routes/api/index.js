@@ -1,7 +1,7 @@
 const router = require("express").Router();
-// const motivationRoutes = require("./motivation");
-const User = require('./User')
-const Settings = require('./Settings')
+const User = require('./User');
+const Settings = require('./Settings');
+const Payment = require('./Payment');
 
 /**
  * API routes 
@@ -17,7 +17,8 @@ const Settings = require('./Settings')
 // router.use("/motivation", motivationRoutes);
 router.use('/Users', User);
 
-
 router.use('/set', Settings);
+
+router.use('/pay', Payment);
 
 module.exports = router;

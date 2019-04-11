@@ -30,7 +30,7 @@ class Payment extends Component {
 
     submitPayment() {
         console.log("submitting payment");
-        axios.post('api/set/payment', {
+        axios.post('api/pay/payments', {
             cardholderName: this.state.cardholderName,
             cvv: this.state.cvv,
             cardNumber: this.state.cardNumber,

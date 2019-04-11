@@ -1,35 +1,31 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link, Redirect, withRouter } from 'react-router-dom';
 import './NavBar.css';
+import loginController from '../../controllers/LoginController';
 
 
 class NavBar extends Component {
   state = {
-    email: '',
-    password: ''
-  };
-
-  handleEmail = (event) => {
-    this.setState({ email: event.target.value })
+    email: "",
+    password: "",
+    error: null,
+    loggedIn: false
   }
-  handlePassword = (event) => {
-    this.setState({ password: event.target.value })
+  login = (e) => {
+    e.preventDefault();
+
+    loginController.login(this.state.email, this.state.password, (err, user) => {
+      if (err) {
+        this.setState({ error: err });
+      } else {
+        this.props.history.push("/app");
+      }
+    });
   }
 
-  // SignIn() {
-  //   console.log("logging in");
-  //   axios.post('api/set/log-in', {
-  //     email: this.state.email,
-  //     password: this.state.password
-  //   })
-  //     .then(function (response) {
-  //       console.log(response);
-  //       window.location.pathname = "/app";
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     });
-  // }
+  inputChanged = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  }
 
   InputValidation = (event) => {
     console.log(this.state);
@@ -43,14 +39,18 @@ class NavBar extends Component {
   }
 
   render() {
+    if (this.state.loggedIn) {
+      return <Redirect to="/app" />;
+    }
     return (
       <form>
         <div className="form-group" id="sign-up-form">
           <div className="row">
             <div className="col-md-7" />
-            <div className="col-md-1.5"><input type="email" className="form-control login-input" id="login-email" placeholder="Email"  onChange={this.handleEmail}/></div>
-            <div className="col-md-1.5"><input type="password" className="form-control login-input" id="login-password" placeholder="Password"  onChange={this.handlePassword}/></div>
-            <Link className="sign-in" to="/app"><button type="button" id="btn-id" className="btn btn-dark" onClick={this.InputValidation}>Sign in</button></Link>
+            <div className="col-md-1.5"><input type="email" className="form-control login-input" id="login-email" placeholder="Email" name="email" onChange={this.inputChanged} /></div>
+            <div className="col-md-1.5"><input type="password" className="form-control login-input" id="login-password" placeholder="Password" name="password" onChange={this.inputChanged} /></div>
+            <Link className="sign-in" to="/app"><button type="button" id="btn-id" className="btn btn-dark" onClick={this.login} value="Login">Sign in</button></Link>
+            {this.state.error && <div>{this.state.error}</div>}
             <div className="col-md-2" />
           </div>
         </div>
@@ -60,4 +60,4 @@ class NavBar extends Component {
   }
 };
 
-export default NavBar;
+export default withRouter(NavBar);
