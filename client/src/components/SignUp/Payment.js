@@ -30,7 +30,7 @@ class Payment extends Component {
 
     submitPayment() {
         console.log("submitting payment");
-        axios.post('api/set/payment', {
+        axios.post('api/pay/payments', {
             cardholderName: this.state.cardholderName,
             cvv: this.state.cvv,
             cardNumber: this.state.cardNumber,
@@ -49,7 +49,7 @@ class Payment extends Component {
     InputValidation = (event) => {
         console.log(this.state);
         event.preventDefault();
-        if (this.state.cardholderName == '' || this.state.cvv == '' || this.state.cardNumber == '' || this.state.month == '' || this.state.year == '') {
+        if (this.state.cardholderName === '' || this.state.cvv === '' || this.state.cardNumber === '' || this.state.month === '' || this.state.year === '') {
             alert("Please fill out all fields before submitting.");
         } else {
             console.log("submitting payment details");

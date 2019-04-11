@@ -2,6 +2,7 @@ const router = require("express").Router();
 // const motivationRoutes = require("./motivation");
 const User = require('./User')
 const Settings = require('./Settings')
+const Payment = require('./Payment')
 
 /**
  * API routes 
@@ -19,5 +20,7 @@ router.use('/Users', User);
 
 
 router.use('/set', Settings);
+
+router.use('/pay', Payment);
 
 module.exports = router;

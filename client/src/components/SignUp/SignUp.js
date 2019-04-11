@@ -30,16 +30,18 @@ class SignUp extends Component {
     }
 
 
-    handleClick = () => {
+    handleClick = (event) => {
         this.setState({
-            premium: false
+            premium: event.target.value
         });
+
         this.InputValidation();
+       
     }
 
-    handlePremiumClick = () => {
+    handlePremiumClick = (event) => {
         this.setState({
-            premium: true
+            premium: event.target.value
         });
             this.InputValidation();
     }
@@ -68,7 +70,7 @@ class SignUp extends Component {
     InputValidation = (event) => {
         console.log(this.state);
         event.preventDefault();
-        if (this.state.firstName == '' || this.state.lastName == '' || this.state.email == '' || this.state.password == '') {
+        if (this.state.firstName === '' || this.state.lastName === '' || this.state.email === '' || this.state.password === '') {
             alert("Please fill out all fields before submitting.");
         } else {
             console.log("Trying to sign up");
@@ -79,7 +81,7 @@ class SignUp extends Component {
     render() {
         return (
             <div>
-                <NavBar />
+                <NavBar/>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-2" />
@@ -115,10 +117,10 @@ class SignUp extends Component {
                                 <div className="col-md-2" />
                                 <br />
                                 <div className="row">
-                                    <div className="col-md-2" />
-                                    <div className="col-md-4"><Link className="sign-up-for-free" to="/settings"><button type="button" onClick={this.handleClick} className="btn btn-dark sign-up-button">Sign Up for Free</button></Link></div>
-                                    <div className="col-md-4"><Link className="unlock-premium" to="/payment"><button type="button" onClick={this.handlePremiumClick} className="btn btn-dark sign-up-button">Unlock Premium</button></Link></div>
-                                    <div className="col-md-2" />
+                                    <div className="col-md-2"/>
+                                    <div className="col-md-4"><Link className="sign-up-for-free" onClick={this.handleClick} value={false} to="/settings"><button type="button" className="btn btn-dark sign-up-button">Sign Up for Free</button></Link></div>
+                                    <div className="col-md-4"><Link className="unlock-premium" onClick={this.handlePremiumClick} value={true} to="/payment"><button type="button" className="btn btn-dark sign-up-button">Unlock Premium</button></Link></div>
+                                    <div className="col-md-2"/>
                                 </div>
 
                             </form>
