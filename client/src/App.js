@@ -8,6 +8,8 @@ import StyleApp from './components/StyleApp/StyleApp';
 import SettingsForm from './components/StyleApp/SettingsForm/SettingsForm';
 import Payment from './components/SignUp/Payment';
 import Pinterest from './components/Pinterest/Pinterest';
+import IconQuiz from './components/Quizzes/IconQuiz/IconQuiz';
+import FashionStyleQuiz from './components/Quizzes/FashionStyleQuiz/FashionStyleQuiz'
 
 class App extends Component {
   render() {
@@ -20,6 +22,8 @@ class App extends Component {
           <Route exact path="/settings" component={SettingsForm} />
           <Route exact path="/app" component={StyleApp} />
           <Route exact path="/pinterest" component={Pinterest} />
+          <Route exact path="/iconq" component={IconQuiz} />
+          <Route exact path="/fsq" component={FashionStyleQuiz} />
         </div>
       </Router>
     );
