@@ -10,7 +10,7 @@ router.post("/settings", (req, res) => {
         style: req.body.style,
         wardrobe: req.body.wardrobe,
     }).then(() => {
-        console.log('settings added!')
+        console.log('Settings Added!')
         res.json({message: "Settings Saved"});
     })
 })
