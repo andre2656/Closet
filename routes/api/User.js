@@ -7,19 +7,20 @@ const bcrypt = require('bcrypt');
 
 
 router.post("/login", (req, res) => {
-    const username = req.body.username;
+    const email = req.body.email;
     const password = req.body.password;
 
     // Find the user in the database
-    db.Users.findOne({ where: { username: username } }).then(
+    db.User.findOne({ where: { email: email } }).then(
         user => {
+            console.log(user)
             try {
                 if (!user) {
-                    throw new Error("Username not found");
+                    throw new Error("email not found");
                 }
 
                 // See if the password hash matches what we have in the database
-                if (!bcrypt.compareSync(password, user.pass_hash)) {
+                if (!bcrypt.compareSync(password, user.password)) {
                     throw new Error("Password invalid");
                 }
 
@@ -43,6 +44,7 @@ router.post("/login", (req, res) => {
                 // Good to go, let the client know
                 res.json({ user: user });
             } catch (err) {
+                console.log(err)
                 res.status(401).json({ error: err.message });
             }
         }
@@ -104,7 +106,7 @@ router.post("/logout", (req, res) => {
 })
 
 router.get("/getUser", authMiddleware, (req, res) => {
-    db.Users.findOne({ where: { id: req.session.user_id } }).then(user => {
+    db.User.findOne({ where: { id: req.session.user_id } }).then(user => {
         // This either worked, or we'll send down null. 
         res.send({ user: user });
     })

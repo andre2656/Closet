@@ -15,6 +15,7 @@ class NavBar extends Component {
     e.preventDefault();
 
     loginController.login(this.state.email, this.state.password, (err, user) => {
+    
       if (err) {
         this.setState({ error: err });
       } else {
@@ -49,7 +50,7 @@ class NavBar extends Component {
             <div className="col-md-7" />
             <div className="col-md-1.5"><input type="email" className="form-control login-input" id="login-email" placeholder="Email" name="email" onChange={this.inputChanged} /></div>
             <div className="col-md-1.5"><input type="password" className="form-control login-input" id="login-password" placeholder="Password" name="password" onChange={this.inputChanged} /></div>
-            <Link className="sign-in" to="/app"><button type="button" id="btn-id" className="btn btn-dark" onClick={this.login} value="Login">Sign in</button></Link>
+            <Link className="sign-in" ><button type="button" id="btn-id" className="btn btn-dark" onClick={this.login} value="Login">Sign in</button></Link>
             {this.state.error && <div>{this.state.error}</div>}
             <div className="col-md-2" />
           </div>

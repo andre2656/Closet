@@ -9,7 +9,7 @@ class LoginController {
     login(email, password, afterLoginCallback) {
         const postData = { email: email, password: password };
 
-        axios.post("/api/user/login", postData)
+        axios.post("/api/Users/login", postData)
             .then(response => {
                 // Got here, we should have a cookie set and can go forward
                 console.log("User logged in");
@@ -30,7 +30,7 @@ class LoginController {
 
     // Hit our API and validate our authentication information
     recheckLogin(loginCallback) {
-        axios.get("/api/user/getUser").then(response => {
+        axios.get("/api/Users/getUser").then(response => {
             let user = response.data.email || null;
 
             this.setUser(user);
@@ -47,7 +47,7 @@ class LoginController {
     }
 
     logout(afterLogoutCallback) {
-        axios.post("/api/user/logout").then(response => {
+        axios.post("/api/Users/logout").then(response => {
             this.setUser(null);
 
             afterLogoutCallback && afterLogoutCallback();

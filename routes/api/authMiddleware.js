@@ -7,7 +7,11 @@
  *  https://expressjs.com/en/guide/writing-middleware.html
  */
 function authMiddleware(req, res, next) {
+    
+    console.log(' \n request \n')
+    console.log(req.cookies)
     try {
+        
         const userId = req.cookies.user_id;
         const authToken = req.cookies.auth_token;
 

@@ -27,8 +27,10 @@ class SignUp extends Component {
         if (this.isFormValid()) {
             this.setState({
                 premium: false
-            });
-            this.createAccount();
+            },
+                this.createAccount
+            )
+            
         } else {
             alert("Please fill out all fields before submitting.");
         }
@@ -37,9 +39,14 @@ class SignUp extends Component {
         if (this.isFormValid()) {
             this.setState({
                 premium: true
+            },
+            () => {
+                console.log(this.state.premium);
+                this.createAccount();
             }
             );
-            this.createAccount();
+            
+            
         } else {
             alert("Please fill out all fields before submitting.");
         }
@@ -53,12 +60,14 @@ class SignUp extends Component {
             password: this.state.password,
             premium: this.state.premium
         })
-            .then(function (response) {
+            .then((response) => {
                 console.log(response);
                 if (this.state.premium) {
                     window.location.pathname = "/payment";
+                }else{
+                    window.location.pathname = "/settings";
                 }
-                window.location.pathname = "/settings";
+               
             })
             .catch(function (error) {
                 console.log(error);
