@@ -58,15 +58,12 @@ import Axios from "axios";
 //     }
 // });
 // PinterestList renders a bootstrap list item
-export function PinterestList({ children }) {
-    return <ul className="list-group">{children}</ul>;
-}
 
 // PinterestListItem renders a bootstrap list item containing data from the recipe api call
 export default class PinterestListItem extends React.Component {
 
     componentDidMount() {
-        Axios.get('https://cors-anywhere.herokuapp.com/https://www.pinterest.com/writerella/feed.rss')
+        Axios.get('https://cors-anywhere.herokuapp.com/https://www.pinterest.com/writerella/Project3-W-Fashion.rss')
             .then(res => {
                 console.log(res)
                 // res.json()
@@ -80,27 +77,7 @@ export default class PinterestListItem extends React.Component {
     render() {
         return (
             <div>
-                <li className="list-group-item">
-                    <Container>
-                        <Row>
-                            <Col size="xs-4 sm-2">
-                            </Col>
-                            <Col size="xs-8 sm-9">
-                                {/* <h3>{props.title}</h3> */}
-                                <p>
-                                    {/* {pins} */}
-                                </p>
-                                <a
-                                    rel="noreferrer noopener"
-                                    target="_blank"
-                                // href={props.href}
-                                >
-                                    Go to recipe!
-                                 </a>
-                            </Col>
-                        </Row>
-                    </Container>
-                </li>
+                <a data-pin-do="embedBoard" data-pin-board-width="auto" data-pin-scale-height="800" data-pin-scale-width="60" href="https://www.pinterest.com/writerella/project3-w-fashion/"></a>
             </div >
 
         );
