@@ -120,8 +120,8 @@ class SignUp extends Component {
                                 <br />
                                 <div className="row">
                                     <div className="col-md-2" />
-                                    <div className="col-md-4"><Link className="sign-up-for-free"><button type="button" onClick={this.handleClick} className="btn btn-dark sign-up-button">Sign Up for Free</button></Link></div>
-                                    <div className="col-md-4"><Link className="unlock-premium"><button type="button" onClick={this.handlePremiumClick} className="btn btn-dark sign-up-button">Unlock Premium</button></Link></div>
+                                    <div className="col-md-4"><button type="button" onClick={this.handleClick} className="btn btn-dark sign-up-button">Sign Up for Free</button></div>
+                                    <div className="col-md-4"><button type="button" onClick={this.handlePremiumClick} className="btn btn-dark sign-up-button">Unlock Premium</button></div>
                                     <div className="col-md-2" />
                                 </div>
                             </form>

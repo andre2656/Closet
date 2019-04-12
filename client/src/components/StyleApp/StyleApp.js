@@ -3,6 +3,7 @@ import axios from 'axios';
 import Quizzes from './Quizzes';
 import NavId from './NavId';
 import CuratedLooks from './CuratedLooks';
+import Pinterest from '../Pinterest/Pinterest'
 import UploadIdeas from './UploadIdeas';
 import './StyleApp.css';
 
@@ -19,7 +20,7 @@ let StyleApp = () => {
                         </div>
                         <div className="row">
                                 <div className='col-md-6'>
-                                        <CuratedLooks />
+                                        <Pinterest />
                                 </div>
                                 <div className='col-md-6'>
                                         <UploadIdeas />
