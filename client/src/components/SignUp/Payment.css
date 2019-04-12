@@ -2,6 +2,10 @@
     margin: 10px;
 }
 
+h2 {
+    margin-bottom: 50px;
+}
+
 @media(max-width:767px){
     #payment-btn {
         margin-right: 30px;
