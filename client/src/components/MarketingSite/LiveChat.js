@@ -1,11 +1,10 @@
-import React, { Component } from "react";
-import axios from 'axios';
+import React from "react";
 import './MarketingSite.css';
 import './LiveChat.css';
 
 const LiveChat = () => {
     let content = { marginTop: "130px" }
-    let padding = { paddingBottom: "50px" }
+    // let padding = { paddingBottom: "50px" }
     return (
         <div className="container flex-container">
             <div className="row">
@@ -15,7 +14,7 @@ const LiveChat = () => {
                     <p>Get all the fashion advice you've ever wanted from the comfort of your home. With a premium account, you can access a live stylist to discuss in app purchases!</p>
                 </div>
                 <div className="col-md-4">
-                    <img id="chat-image" src="images/stylist.jpg" />
+                    <img id="chat-image" src="images/stylist.jpg" alt= 'chat' />
                 </div>
                 <div className="col-md-2" />
             </div>

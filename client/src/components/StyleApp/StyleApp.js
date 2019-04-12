@@ -1,8 +1,6 @@
 import React from 'react';
-import axios from 'axios';
 import Quizzes from './Quizzes';
 import NavId from './NavId';
-import CuratedLooks from './CuratedLooks';
 import Pinterest from '../Pinterest/Pinterest'
 import UploadIdeas from './UploadIdeas';
 

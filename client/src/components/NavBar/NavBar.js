@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, Redirect, withRouter } from 'react-router-dom';
+import {Redirect, withRouter } from 'react-router-dom';
 import './NavBar.css';
 import loginController from '../../controllers/LoginController';
 
@@ -50,8 +50,8 @@ class NavBar extends Component {
             <div className="col-md-7" />
             <div className="col-md-1.5"><input type="email" className="form-control login-input" id="login-email" placeholder="Email" name="email" onChange={this.inputChanged} /></div>
             <div className="col-md-1.5"><input type="password" className="form-control login-input" id="login-password" placeholder="Password" name="password" onChange={this.inputChanged} /></div>
-            <Link className="sign-in" ><button type="button" id="btn-id" className="btn btn-dark" onClick={this.login} value="Login">Sign in</button></Link>
-            {this.state.error && <div>{this.state.error}</div>}
+            <button type="button" id="btn-id" className="btn btn-dark" onClick={this.login} value="Login">Sign in</button>
+            {this.state.error && <div>{alert(this.state.error)}</div>}
             <div className="col-md-2" />
           </div>
         </div>

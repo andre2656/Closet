@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import NavBar from '../NavBar/NavBar';
-import { Link } from 'react-router-dom';
 import './SignUp.css';
 class SignUp extends Component {
     state = {
