@@ -3,8 +3,6 @@ import axios from 'axios';
 import NavBar from '../NavBar/NavBar';
 import { Link } from 'react-router-dom';
 import './SignUp.css';
-
-
 class SignUp extends Component {
     state = {
         firstName: '',
@@ -13,38 +11,40 @@ class SignUp extends Component {
         password: '',
         premium: false
     };
-
     firstNameChanged = (event) => {
         this.setState({ firstName: event.target.value });
     };
-
     lastNameChanged = (event) => {
         this.setState({ lastName: event.target.value });
     };
-
     emailChanged = (event) => {
         this.setState({ email: event.target.value });
     }
     passwordChanged = (event) => {
         this.setState({ password: event.target.value });
     }
-
-
     handleClick = () => {
-        this.setState({
-            premium: false
-        });
-        this.InputValidation();
+        if (this.isFormValid()) {
+            this.setState({
+                premium: false
+            });
+            this.createAccount();
+        } else {
+            alert("Please fill out all fields before submitting.");
+        }
     }
-
     handlePremiumClick = () => {
-        this.setState({
-            premium: true
-        });
-            this.InputValidation();
+        if (this.isFormValid()) {
+            this.setState({
+                premium: true
+            }
+            );
+            this.createAccount();
+        } else {
+            alert("Please fill out all fields before submitting.");
+        }
     }
-
-    createAccount() { 
+    createAccount() {
         console.log(this.state)
         axios.post('api/Users/sign-up', {
             firstName: this.state.firstName,
@@ -56,26 +56,21 @@ class SignUp extends Component {
             .then(function (response) {
                 console.log(response);
                 if (this.state.premium) {
-                window.location.pathname="/payment";
+                    window.location.pathname = "/payment";
                 }
-                window.location.pathname="/settings";
+                window.location.pathname = "/settings";
             })
             .catch(function (error) {
                 console.log(error);
             });
     }
-
-    InputValidation = (event) => {
-        console.log(this.state);
-        event.preventDefault();
+    isFormValid = () => {
         if (this.state.firstName === '' || this.state.lastName === '' || this.state.email === '' || this.state.password === '') {
-            alert("Please fill out all fields before submitting.");
+            return false;
         } else {
-            console.log("Trying to sign up");
-            this.createAccount();
+            return true;
         }
     }
-
     render() {
         return (
             <div>
@@ -116,11 +111,10 @@ class SignUp extends Component {
                                 <br />
                                 <div className="row">
                                     <div className="col-md-2" />
-                                    <div className="col-md-4"><Link className="sign-up-for-free" to="/settings"><button type="button" onClick={this.handleClick} className="btn btn-dark sign-up-button">Sign Up for Free</button></Link></div>
-                                    <div className="col-md-4"><Link className="unlock-premium" to="/payment"><button type="button" onClick={this.handlePremiumClick} className="btn btn-dark sign-up-button">Unlock Premium</button></Link></div>
+                                    <div className="col-md-4"><Link className="sign-up-for-free"><button type="button" onClick={this.handleClick} className="btn btn-dark sign-up-button">Sign Up for Free</button></Link></div>
+                                    <div className="col-md-4"><Link className="unlock-premium"><button type="button" onClick={this.handlePremiumClick} className="btn btn-dark sign-up-button">Unlock Premium</button></Link></div>
                                     <div className="col-md-2" />
                                 </div>
-
                             </form>
                         </div>
                     </div>
@@ -129,5 +123,4 @@ class SignUp extends Component {
         );
     }
 };
-
 export default SignUp;
