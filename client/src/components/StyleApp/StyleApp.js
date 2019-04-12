@@ -4,7 +4,6 @@ import Quizzes from './Quizzes';
 import NavId from './NavId';
 import CuratedLooks from './CuratedLooks';
 import UploadIdeas from './UploadIdeas';
-import './StyleApp.css';
 
 let StyleApp = () => {
         return (
