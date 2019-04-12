@@ -5,7 +5,6 @@ import NavId from './NavId';
 import CuratedLooks from './CuratedLooks';
 import Pinterest from '../Pinterest/Pinterest'
 import UploadIdeas from './UploadIdeas';
-import './StyleApp.css';
 
 let StyleApp = () => {
         return (

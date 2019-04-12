@@ -1,0 +1,29 @@
+#navBar {
+    background-color: black;
+    color: white;
+    margin-bottom: 50px;
+    height: 60px;
+    justify-content: center;
+}
+ 
+#title {
+    margin-top: 10px;
+}
+
+#welcome-text {
+    margin-top: 18px;
+}
+
+#signout {
+    margin-top: 10px;
+}
+
+@media(max-width:767px) {
+    #navBar {
+        height: 150px;
+    }
+
+    #welcome-text {
+        margin-top: -5px;
+    }
+}
