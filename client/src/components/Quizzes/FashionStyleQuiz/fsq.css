@@ -10,6 +10,9 @@
     text-align: left;
     margin-left: 5%;
 }
+.resultsRow{
+    text-align: center;
+}
 .answerOption{
     text-align: left;
     margin-left: 33%;

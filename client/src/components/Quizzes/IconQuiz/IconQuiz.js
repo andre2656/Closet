@@ -20,9 +20,10 @@ class IconQuiz extends Component {
       answerOptions: [],
       answer: '',
       answersCount: {
-        Onassis: 0,
-        Hepburn: 0,
-        Monroe: 0
+        GraceKelly: 0,
+        JackieOnassis: 0,
+        AudreyHepburn: 0,
+        MarilynMonroe: 0,
       },
       result: ''
     };
@@ -120,10 +121,13 @@ class IconQuiz extends Component {
       />
     );
   }
+
+  
  
   renderResult() {
     return (
-      <Result quizResult={this.state.result} />
+      <Result quizResult={this.state.result}/>
+     
     );
   }
  
