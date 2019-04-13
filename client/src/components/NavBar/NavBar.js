@@ -9,7 +9,8 @@ class NavBar extends Component {
     email: "",
     password: "",
     error: null,
-    loggedIn: false
+    loggedIn: false,
+    user: null
   }
   login = (e) => {
     e.preventDefault();

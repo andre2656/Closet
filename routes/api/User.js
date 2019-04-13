@@ -13,7 +13,6 @@ router.post("/login", (req, res) => {
     // Find the user in the database
     db.User.findOne({ where: { email: email } }).then(
         user => {
-            console.log(user)
             try {
                 if (!user) {
                     throw new Error("email not found");
@@ -24,22 +23,7 @@ router.post("/login", (req, res) => {
                     throw new Error("Password invalid");
                 }
 
-                // This is not super secure, but a random token is all we need right now.
-                const authToken = Math.random();
-
-                // Now do two things
-                //  1. Set the user information in our session. This gets stored in the db.
-                //  2. Set the user information in our cookie. This gets stored on the client side.
-                // When the client sends another request to the server, 
-                //  we with validate that the session and cookie info match using authMiddleware
-
-                // Update session with our auth info      
-                req.session.user_id = user.id;
-                req.session.auth_token = authToken;
-
-                // Send back cookie
-                res.cookie("user_id", user.id);
-                res.cookie("auth_token", authToken);
+               setLoginCookie(user, req, res);
 
                 // Good to go, let the client know
                 res.json({ user: user });
@@ -50,17 +34,37 @@ router.post("/login", (req, res) => {
         }
     )
 });
+setLoginCookie= (user, req, res) => {
+    // This is not super secure, but a random token is all we need right now.
+    const authToken = Math.random();
+
+    // Now do two things
+    //  1. Set the user information in our session. This gets stored in the db.
+    //  2. Set the user information in our cookie. This gets stored on the client side.
+    // When the client sends another request to the server, 
+    //  we with validate that the session and cookie info match using authMiddleware
+
+    // Update session with our auth info      
+    req.session.user_id = user.id;
+    req.session.auth_token = authToken;
+
+    // Send back cookie
+    res.cookie("user_id", user.id);
+    res.cookie("auth_token", authToken);
+}
 
 router.post("/sign-up", (req, res) => {
-    const password = req.body.password;
-
+    const {email, password} = req.body;
+    console.log("registering", email, password);
     console.log("registering");
 
     // TODO: Validate username & password. Make sure they're long enough / secure enough
 
+    //setting login cookie on signup
+    
     // Hash password so nobody can look at the database and get your password
     let passHash = bcrypt.hashSync(password, 10);
-
+        
     // Store new user in the database
     db.User.create({
         firstName: req.body.firstName,
@@ -73,9 +77,11 @@ router.post("/sign-up", (req, res) => {
             res.status({ error: "Error creating user in database" });
             return;
         }
+        // If you want to also log the user in at this step
+        setLoginCookie(user, req, res);
 
         // Don't authenticate just yet, just tell the client this worked ok.
-        res.json({ success: true });
+        res.json({ success: true, user: user });
     });
 })
 // router.post("/sign-up", (req, res) => {

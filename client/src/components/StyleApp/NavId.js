@@ -6,7 +6,7 @@ import loginController from "../../controllers/LoginController"
 
 class NavId extends Component {
     state = {
-        user: '',
+        user: null,
         loggedIn: true
       }
 
@@ -37,7 +37,7 @@ class NavId extends Component {
                 <div className='row' id="navBar">
                     <div className='col-md-5' id="title"><h2>The Closet</h2></div>
                     <div className="col-md-1"/>
-                    <div className='col-md-3' id="welcome-text">Welcome { this.state.user ? <div>User: {this.state.user.username}</div> : null }</div>
+                    <div className='col-md-3' id="welcome-text"> {this.state.user ? <div>Welcome {this.state.user.user.firstName}!</div> : null }</div>
                     <Link className="sign-out" to="/"><button type="button" className="btn btn-light" id="signout" onClick={this.logout} value="Log out">Log out</button></Link>
                     <div className='col-md-1' />
                 </div>

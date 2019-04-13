@@ -2,6 +2,7 @@ import axios from "axios";
 
 class LoginController {
     // This is a list of callbacks that are remembered for when the user changes. (login/logout)
+    
     userChangedListeners = [];
 
     user = null;
@@ -14,7 +15,7 @@ class LoginController {
                 // Got here, we should have a cookie set and can go forward
                 console.log("User logged in");
 
-                let user = response.data.email;
+                let user = response.data.user;
                 this.setUser(user);
 
                 afterLoginCallback && afterLoginCallback(null, user);
@@ -31,7 +32,8 @@ class LoginController {
     // Hit our API and validate our authentication information
     recheckLogin(loginCallback) {
         axios.get("/api/Users/getUser").then(response => {
-            let user = response.data.email || null;
+            let user = response.data || null;
+            console.log(user)
 
             this.setUser(user);
 
