@@ -24,6 +24,9 @@
     }
 
     #welcome-text {
-        margin-top: -5px;
+        margin-top: -40px;
+    }
+    #signout{
+        margin-top: -10px;
     }
 }
