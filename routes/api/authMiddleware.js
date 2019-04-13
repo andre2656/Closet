@@ -28,7 +28,7 @@ function authMiddleware(req, res, next) {
         }
 
     } catch (err) {
-        console.log("authMiddleware issue", err);
+        console.log("authMiddleware issue - User not logged in: ", err);
 
         // 401 - Unauthorized
         res.status(401).json({ error: err.message });

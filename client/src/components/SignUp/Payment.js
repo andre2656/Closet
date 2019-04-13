@@ -91,9 +91,9 @@ class Payment extends Component {
                         <input type="text" className="form-control payment-input" id="year" placeholder="YY" onChange={this.handleYear}></input>
                     </div>
                     <div className="col-md-1" />
-                    <img className="col-md-1" className="card-image" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Visa_%28company%29_logo.svg" width={65} height={37} alt= 'Visa' />
-                    <img className="col-md-1" className="card-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" width={55} height={39} alt='Mastercard'  />
-                    <img className="col-md-1" className="card-image" src="https://cdn2.iconfinder.com/data/icons/credit-cards-6/156/american_express-512.png" width={65} height={50} alt='American-Express'  />
+                    <img className="col-md-1 card-image" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Visa_%28company%29_logo.svg" width={65} height={37} alt= 'Visa' />
+                    <img className="col-md-1 card-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" width={55} height={39} alt='Mastercard'  />
+                    <img className="col-md-1 card-image" src="https://cdn2.iconfinder.com/data/icons/credit-cards-6/156/american_express-512.png" width={65} height={50} alt='American-Express'  />
                     <div className="col-md-3" />
                 </div>
                 <div className="row">
