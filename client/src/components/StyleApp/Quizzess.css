@@ -1,0 +1,8 @@
+.carousel-control-next{
+    color: black;
+}
+.carousel-caption{
+    background-color: rgba(255, 168, 128, 0.332);
+    margin-left: -50%;
+    margin-right: -50%;
+}

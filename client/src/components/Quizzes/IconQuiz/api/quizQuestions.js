@@ -3,21 +3,21 @@ const IconQuiz = [
         question: "You don't walk out of the door without: ",
         answers: [
             {
-                type: "Jackie Onassis",
+                type: "JackieOnassis",
                 content: "Lipstick and a compact"
                 
             }, 
             {
-                type: "Marilyn Monroe",
+                type: "MarilyMonroe",
                 content: "Something that is uniquely you, an eyecatching hair clip or an unusual handbag"
                 
             },   
             {
-                type: "Audrey Hepburn",
+                type: "AudreyHepburn",
                 content: "Spritzing perfume on your wrists and neck"
             },
             {
-                type: "Grace Kelly",
+                type: "GraceKelly",
                 content: "Lip balm"
             }
         ]
@@ -26,19 +26,19 @@ const IconQuiz = [
         question: "Your hair is best described as: ",
         answers: [
             {
-                type: "Audrey Hepburn",
+                type: "AudreyHepburn",
                 content: "Simple the less time you spend on it the happier you are"
             },
             {
-                type: "Grace Kelly",
+                type: "GraceKelly",
                 content: "Classic, keeping up with the trends isnt your thing"
             },
             {
-                type: "Jackie Onassis",
+                type: "JackieOnassis",
                 content: "Verstile, you like to try different styles"
             },
             {
-                type: "Marilyn Monroe",
+                type: "MarilynMonroe",
                 content: "Stylish and you spend a great deal of time making it look good"
             }
         ]
@@ -47,19 +47,19 @@ const IconQuiz = [
         question: "Your lipstick shade of choice is: ",
         answers: [
             {
-                type: "Audrey Hepburn",
+                type: "AudreyHepburn",
                 content: "Whatever makes your features stand out, but usually dark"
             },
             {
-                type: "Grace Kelly",
+                type: "GraceKelly",
                 content: "a neutral color or a clear gloss"
             },
             {
-                type: "Marilyn Monroe",
+                type: "MarilynMonroe",
                 content: "a red rose that you have been loyal to for years"
             },
             {
-                type: "Jackie Onassis",
+                type: "JackieOnassis",
                 content: "Whatevers new or in style"
             }
         ]
@@ -68,19 +68,19 @@ const IconQuiz = [
         question: "Which of the following would you most likely buy? ",
         answers: [
             {
-                type: "Grace Kelly",
+                type: "GraceKelly",
                 content: "A sophisticated black cocktail dress"
             },
             {
-                type: "Jackie Onassis",
+                type: "JackieOnassis",
                 content: "A fun plaid coat"
             },
             {
-                type: "Marilyn Monroe",
+                type: "MarilynMonroe",
                 content: "A sleek pair of tall leather boots"
             },
             {
-                type: "Audrey Hepburn",
+                type: "AudreyHepburn",
                 content: "A sturdy pair of wear-with-everything flats"
             }
         ]
@@ -89,19 +89,19 @@ const IconQuiz = [
         question: " When you open your closet you see most of: ",
         answers: [
             {
-                type: "Audrey Hepburn",
+                type: "AudreyHepburn",
                 content: "Black"
             },
             {
-                type: "Jackie Onassis",
+                type: "JackieOnassis",
                 content: "Patterns and colors"
             },
             {
-                type: "Marilyn Monroe",
+                type: "MarilynMonroe",
                 content: "Denim"
             },
             {
-                type: "Grace Kelly",
+                type: "GraceKelly",
                 content: "Silk"
             }
         ]
@@ -110,19 +110,19 @@ const IconQuiz = [
         question: " Which of the following would you least likely be described as: ",
         answers: [
             {
-                type: "Marilyn Monroe",
+                type: "MarilynMonroe",
                 content: "Vain or stuffy"
             },
             {
-                type: "Jackie Onassis",
+                type: "JackieOnassis",
                 content: "Sloppy or careless"
             },
             {
-                type: "Audrey Hepburn",
+                type: "AudreyHepburn",
                 content: "Unoriginal or dowdy"
             },
             {
-                type: "Grace Kelly",
+                type: "GraceKelly",
                 content: "Mousy or plain"
             }
         ]
@@ -131,19 +131,19 @@ const IconQuiz = [
         question: " You are an academy award best actress nominee. At the award ceremony, your dress is: ",
         answers: [
             {
-                type: "Marilyn Monroe",
+                type: "MarilynMonroe",
                 content: "Glittering and queen like"
             },
             {
-                type: "Jackie Onassis",
+                type: "JackieOnassis",
                 content: "Simple and flowing in a color you love"
             },
             {
-                type: "Grace Kelly",
+                type: "GraceKelly",
                 content: "Elegant and understated in a rich beautiful color"
             },
             {
-                type: "Audrey Hepburn",
+                type: "AudreyHepburn",
                 content: "Unusual but not outlandish"
             }
         ]
@@ -152,19 +152,19 @@ const IconQuiz = [
         question: " Which of the following would you never wear in public: ",
         answers: [
             {
-                type: "Jackie Onassis",
+                type: "JackieOnassis",
                 content: "Anything leopard print or flashy"
             },
             {
-                type: "Marilyn Monroe",
+                type: "MarilynMonroe",
                 content: "Sandals with socks"
             },
             {
-                type: "Grace Kelly",
+                type: "GraceKelly",
                 content: "Sweatpants"
             },
             {
-                type: "Audrey Hepburn",
+                type: "AudreyHepburn",
                 content: "Anything uncomfortable"
             }
         ]

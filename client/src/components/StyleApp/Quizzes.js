@@ -1,4 +1,6 @@
 import React from "react";
+import {Link} from 'react-router-dom';
+import './Quizzess.css';
 
 const Quizzes = () => {
     
@@ -16,27 +18,29 @@ const Quizzes = () => {
                 </ol>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="https://cdn.shopify.com/s/files/1/0868/1504/files/bf_grande.png?v=1533662108" className="d-block w-100" alt="" />
+                        <img src="images/Fashion-Style-7.jpg" className="d-block w-100" alt="" />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Fashion Style</h5>
+                            <Link className="quiz=start" to="/fsq"><button type="button" className="btn btn-dark">Start Quiz</button></Link>
                             <p>Learn more about what your ideal fashion style would be?</p>
                         </div>
                     </div>
                     <div className="carousel-item">
+                        <img src="images/audrey.jpg" className="d-block w-100" alt="" />
+                        <div className="carousel-caption d-none d-md-block">
+                            <h5>Fashion Icon</h5>
+                            <Link className="quiz=start" to="/iconq"><button type="button" className="btn btn-dark">Start Quiz</button></Link>
+                            <p>Which fashion icon do you most emmulate?</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="carousel-item">
                         <img src="https://patternobserver.com/wp-content/uploads/2014/05/IMG-12-palette-picking.png" className="d-block w-100" alt="" />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Coloring</h5>
                             <p>What is your ideal color palette.</p>
                         </div>
                     </div>
-                    <div className="carousel-item">
-                        <img src="https://wordpress-mnei139eijehv5w.netdna-ssl.com/wp-content/uploads/2017/03/the-mod-the-modist-modest-icons-march-issue-modest-fashion.png" className="d-block w-100" alt="" />
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>Fashion Icon</h5>
-                            <p>Which fashion icon do you most emmulate?</p>
-                        </div>
-                    </div>
-                </div>
                 <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="sr-only">Previous</span>

@@ -15,6 +15,7 @@ let StyleApp = () => {
                                 </div>
                                 <div className='col-md-3' />
                         </div>
+                        <br/>
                         <div className="row">
                                 <div className='col-md-6'>
                                         <Pinterest />
