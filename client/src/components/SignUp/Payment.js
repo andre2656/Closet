@@ -66,7 +66,7 @@ class Payment extends Component {
                 <div className="row">
                     <div className="col-md-3" />
                     <div className="col-md-4">
-                        <input type="email" className="form-control payment-input" id="name" placeholder="Cardholder Name" onChange={this.handleCardholderName}></input>
+                        <input type="name" className="form-control payment-input" id="name" placeholder="Cardholder Name" onChange={this.handleCardholderName}></input>
                     </div>
                     <div className="col-md-2">
                         <input type="text" className="form-control payment-input" id="cvv" placeholder="CVV" onChange={this.handleCvv}></input>

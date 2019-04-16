@@ -15,12 +15,12 @@ router.post("/login", (req, res) => {
         user => {
             try {
                 if (!user) {
-                    throw new Error("email not found");
+                    throw new Error("Missing credentials. Cannot log in.");
                 }
 
                 // See if the password hash matches what we have in the database
                 if (!bcrypt.compareSync(password, user.password)) {
-                    throw new Error("Password invalid");
+                    throw new Error("Missing credentials. Cannot log in.");
                 }
 
                setLoginCookie(user, req, res);
