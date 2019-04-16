@@ -2,6 +2,7 @@ const router = require("express").Router();
 const User = require('./User');
 const Settings = require('./Settings');
 const Payment = require('./Payment');
+const apiRoutes = require('./apiRoutes')
 
 /**
  * API routes 
@@ -20,5 +21,7 @@ router.use('/Users', User);
 router.use('/set', Settings);
 
 router.use('/pay', Payment);
+
+router.use('/api', apiRoutes);
 
 module.exports = router;
