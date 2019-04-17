@@ -10,10 +10,11 @@
 
 #chat-image {
     margin-top: 50px;
-    width: 400px;
+    width: 100%;
+    height: auto;
 }
 
 #shop-image { 
-    height: 230px;
+    height: 350px;
     margin-top: 70px;
 }
