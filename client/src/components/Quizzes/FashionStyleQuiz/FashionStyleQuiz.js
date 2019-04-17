@@ -135,11 +135,7 @@ class FashionStyleQuiz extends Component {
   render() {
     return (
       <div className="App">
-        {/* <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" /> 
-          <img src={got} className="App-img" alt="img" />
-          
-        </div> */}
+       
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
     );

@@ -3,6 +3,7 @@ import Quizzes from './Quizzes';
 import NavId from './NavId';
 import Pinterest from './Pinterest/Pinterest'
 import UploadIdeas from './UploadIdeas';
+import LiveChat from './LiveChat';
 
 let StyleApp = () => {
 
@@ -25,6 +26,8 @@ let StyleApp = () => {
                                 </div>
                                 <div className='col-md-6'>
                                         <UploadIdeas/>
+                                        <br/>
+                                        <LiveChat />
                                 </div>
                         </div>
                 </div>
