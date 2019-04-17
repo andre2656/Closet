@@ -4,12 +4,20 @@ import Recognition from './StyleRecognition/StyleRecognition'
 
 class UploadIdeas extends Component {
     state = {
-        image: 'https://cdn.shopify.com/s/files/1/0033/7939/6672/products/product_906861_royal-blue-jacquar_1_400x.jpg?v=1554340311'
+        image: 'https://cdn.shopify.com/s/files/1/0293/9277/products/Fashion_Nova_07-14-17-1067_760x.jpg?v=1500487929',
+        img: '',
+        getImage: null
     };
 
     imageChanged = (event) => {
-        this.setState({ image: event.target.value })
+        this.setState({ img: event.target.value })
         console.log(this.state.image)
+    }
+    buttonClicked = () => {
+        this.setState({ image: this.state.img});
+        this.setState({img: ''})
+        
+
     }
     render() {
         return (
@@ -21,7 +29,7 @@ class UploadIdeas extends Component {
                     <div className="card-header">Upload an Outfit to Find Where to Buy It</div>
                     <div className="card-body">
                         <div className= 'row' style={{justifyContent: "center"}}>
-                            <input style={{marginRight: "5px"}} type="text" onChange={this.imageChanged} /> <button type='submit' className="btn btn-dark btn-file">Upload Image URL</button>
+                            <input id='imageUrl' style={{ marginRight: "5px" }} type="text" onChange= {this.imageChanged} value= {this.state.img} /> <button onClick={this.buttonClicked} type='submit' className="btn btn-dark btn-file">Upload Image URL</button>
                         </div>
                        
                     </div>
