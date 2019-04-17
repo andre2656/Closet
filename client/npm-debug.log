@@ -1,6 +1,7 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/Users/clavingia/.nvm/versions/node/v6.11.0/bin/node',
 1 verbose cli   '/Users/clavingia/.nvm/versions/node/v6.11.0/bin/npm',
+1 verbose cli   'run',
 1 verbose cli   'start' ]
 2 info using npm@3.10.10
 3 info using node@v6.11.0
@@ -9,7 +10,7 @@
 6 silly lifecycle mern@0.1.0~prestart: no script for prestart, continuing
 7 info lifecycle mern@0.1.0~start: mern@0.1.0
 8 verbose lifecycle mern@0.1.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle mern@0.1.0~start: PATH: /Users/clavingia/.nvm/versions/node/v6.11.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/clavingia/UCLA/Homework/project3/Closet/client/node_modules/.bin:/Users/clavingia/.rbenv/shims:/Users/clavingia/.rbenv/shims:/Users/clavingia/.bin:/usr/local/bin:/Users/clavingia/.nvm/versions/node/v6.11.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/bin/java:/usr/local/mysql/bin
+9 verbose lifecycle mern@0.1.0~start: PATH: /Users/clavingia/.nvm/versions/node/v6.11.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/clavingia/UCLA/Homework/project3/Closet/client/node_modules/.bin:/Users/clavingia/.nvm/versions/node/v6.11.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/clavingia/UCLA/Homework/project3/Closet/node_modules/.bin:/Users/clavingia/.nvm/versions/node/v6.11.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/clavingia/UCLA/Homework/project3/Closet/node_modules/.bin:/Users/clavingia/.nvm/versions/node/v6.11.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/clavingia/UCLA/Homework/project3/Closet/node_modules/.bin:/Users/clavingia/.rbenv/shims:/Users/clavingia/.rbenv/shims:/Users/clavingia/.bin:/usr/local/bin:/Users/clavingia/.nvm/versions/node/v6.11.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/bin/java:/usr/local/mysql/bin
 10 verbose lifecycle mern@0.1.0~start: CWD: /Users/clavingia/UCLA/Homework/project3/Closet/client
 11 silly lifecycle mern@0.1.0~start: Args: [ '-c', 'react-scripts start' ]
 12 silly lifecycle mern@0.1.0~start: Returned: code: 1  signal: null
@@ -27,7 +28,7 @@
 15 verbose pkgid mern@0.1.0
 16 verbose cwd /Users/clavingia/UCLA/Homework/project3/Closet/client
 17 error Darwin 18.2.0
-18 error argv "/Users/clavingia/.nvm/versions/node/v6.11.0/bin/node" "/Users/clavingia/.nvm/versions/node/v6.11.0/bin/npm" "start"
+18 error argv "/Users/clavingia/.nvm/versions/node/v6.11.0/bin/node" "/Users/clavingia/.nvm/versions/node/v6.11.0/bin/npm" "run" "start"
 19 error node v6.11.0
 20 error npm  v3.10.10
 21 error code ELIFECYCLE
