@@ -20,12 +20,8 @@ class UploadIdeas extends Component {
                 <div className="card" id='uploadCard' >
                     <div className="card-header">Upload an Outfit to Find Where to Buy It</div>
                     <div className="card-body">
-                       {/* <div className= 'row'> */}
-                        <label className="btn btn-dark btn-file"> Upload <input type="file" style={{ display: "none" }} />
-                            </label>
-                       {/* </div> */}
-                        <div className= 'row'>
-                            <input type="text" onChange={this.imageChanged} /> <button type='submit' className="btn btn-dark btn-file">Upload Link</button>
+                        <div className= 'row' style={{justifyContent: "center"}}>
+                            <input style={{marginRight: "5px"}} type="text" onChange={this.imageChanged} /> <button type='submit' className="btn btn-dark btn-file">Upload Image URL</button>
                         </div>
                        
                     </div>
@@ -37,9 +33,9 @@ class UploadIdeas extends Component {
                     </div>
                     <div className="card" id='uploadCard' >
                         <div className="card-header">See Results Based on Your Photo Upload</div>
-                        <div className="card-body" id="outfitResults" style={{ height: "400px" }}>
+                        <div className="card-body" id="outfitResults" style={{ height: "400px", overflow: "scroll" }}>
                             <Recognition
-                            img= {this.state.image}
+                            img={this.state.image}
                             />
                         </div>
                     </div >
