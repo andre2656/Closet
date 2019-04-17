@@ -3,21 +3,21 @@ const IconQuiz = [
         question: "You don't walk out of the door without: ",
         answers: [
             {
-                type: "JackieOnassis",
+                type: "Monroe",
                 content: "Lipstick and a compact"
                 
             }, 
             {
-                type: "MarilyMonroe",
+                type: "Sedgwick",
                 content: "Something that is uniquely you, an eyecatching hair clip or an unusual handbag"
                 
             },   
             {
-                type: "AudreyHepburn",
+                type: "Hepburn",
                 content: "Spritzing perfume on your wrists and neck"
             },
             {
-                type: "GraceKelly",
+                type: "Joplin",
                 content: "Lip balm"
             }
         ]
@@ -26,19 +26,19 @@ const IconQuiz = [
         question: "Your hair is best described as: ",
         answers: [
             {
-                type: "AudreyHepburn",
+                type: "Hepburn",
                 content: "Simple the less time you spend on it the happier you are"
             },
             {
-                type: "GraceKelly",
+                type: "Monroe",
                 content: "Classic, keeping up with the trends isnt your thing"
             },
             {
-                type: "JackieOnassis",
-                content: "Verstile, you like to try different styles"
+                type: "Joplin",
+                content: "Loose, natural waves"
             },
             {
-                type: "MarilynMonroe",
+                type: "Sedgwick",
                 content: "Stylish and you spend a great deal of time making it look good"
             }
         ]
@@ -47,19 +47,19 @@ const IconQuiz = [
         question: "Your lipstick shade of choice is: ",
         answers: [
             {
-                type: "AudreyHepburn",
+                type: "Hepburn",
                 content: "Whatever makes your features stand out, but usually dark"
             },
             {
-                type: "GraceKelly",
-                content: "a neutral color or a clear gloss"
+                type: "Joplin",
+                content: "A neutral color or a clear gloss"
             },
             {
-                type: "MarilynMonroe",
-                content: "a red rose that you have been loyal to for years"
+                type: "Monroe",
+                content: "A red rose that you have been loyal to for years"
             },
             {
-                type: "JackieOnassis",
+                type: "Sedgwick",
                 content: "Whatevers new or in style"
             }
         ]
@@ -68,20 +68,20 @@ const IconQuiz = [
         question: "Which of the following would you most likely buy? ",
         answers: [
             {
-                type: "GraceKelly",
-                content: "A sophisticated black cocktail dress"
+                type: "Monroe",
+                content: "A new cocktail dress"
             },
             {
-                type: "JackieOnassis",
+                type: "Sedgwick",
                 content: "A fun plaid coat"
             },
             {
-                type: "MarilynMonroe",
-                content: "A sleek pair of tall leather boots"
+                type: "Joplin",
+                content: "A pair of slouch boots"
             },
             {
-                type: "AudreyHepburn",
-                content: "A sturdy pair of wear-with-everything flats"
+                type: "Hepburn",
+                content: "A pair of wear-with-everything flats"
             }
         ]
     },
@@ -89,19 +89,19 @@ const IconQuiz = [
         question: " When you open your closet you see most of: ",
         answers: [
             {
-                type: "AudreyHepburn",
+                type: "Hepburn",
                 content: "Black"
             },
             {
-                type: "JackieOnassis",
+                type: "Sedgwich",
                 content: "Patterns and colors"
             },
             {
-                type: "MarilynMonroe",
+                type: "Joplin",
                 content: "Denim"
             },
             {
-                type: "GraceKelly",
+                type: "Monroe",
                 content: "Silk"
             }
         ]
@@ -110,19 +110,19 @@ const IconQuiz = [
         question: " Which of the following would you least likely be described as: ",
         answers: [
             {
-                type: "MarilynMonroe",
+                type: "Joplin",
                 content: "Vain or stuffy"
             },
             {
-                type: "JackieOnassis",
+                type: "Hepburn",
                 content: "Sloppy or careless"
             },
             {
-                type: "AudreyHepburn",
+                type: "Sedgwick",
                 content: "Unoriginal or dowdy"
             },
             {
-                type: "GraceKelly",
+                type: "Monroe",
                 content: "Mousy or plain"
             }
         ]
@@ -131,20 +131,20 @@ const IconQuiz = [
         question: " You are an academy award best actress nominee. At the award ceremony, your dress is: ",
         answers: [
             {
-                type: "MarilynMonroe",
+                type: "Monroe",
                 content: "Glittering and queen like"
             },
             {
-                type: "JackieOnassis",
+                type: "Joplin",
                 content: "Simple and flowing in a color you love"
             },
             {
-                type: "GraceKelly",
+                type: "Hepburn",
                 content: "Elegant and understated in a rich beautiful color"
             },
             {
-                type: "AudreyHepburn",
-                content: "Unusual but not outlandish"
+                type: "Sedgwick",
+                content: "Unusual from an undiscovered designer"
             }
         ]
     },
@@ -152,19 +152,19 @@ const IconQuiz = [
         question: " Which of the following would you never wear in public: ",
         answers: [
             {
-                type: "JackieOnassis",
+                type: "Monroe",
                 content: "Anything leopard print or flashy"
             },
             {
-                type: "MarilynMonroe",
+                type: "Hepburn",
                 content: "Sandals with socks"
             },
             {
-                type: "GraceKelly",
+                type: "Sedgwick",
                 content: "Sweatpants"
             },
             {
-                type: "AudreyHepburn",
+                type: "Joplin",
                 content: "Anything uncomfortable"
             }
         ]

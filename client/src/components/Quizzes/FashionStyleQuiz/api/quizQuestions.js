@@ -1,6 +1,6 @@
 const FashionStyleQuiz = [
     {
-        question: "Do you Your personality is often a strong indicator of what type of style suits you the best. For example, a woman who is soft-spoken and likes to daydream usually gravitates towards frilly pieces like lace and ruffles. A culture-loving person tends to dress more urban and sporty than most fashionistas. Select the line with the words that best describe your personality: ",
+        question: "Your personality is often a strong indicator of what type of style suits you the best. Select the line with the words that best describe your personality: ",
         answers: [
             {
                 type: "Classic",
@@ -23,12 +23,8 @@ const FashionStyleQuiz = [
                 content: "Bold, open-minded, enjoys life to the fullest"
             },
             {
-                type: "Sporty",
-                content: "Creative, laid-back, and unconventional"
-            },
-            {
                 type: "Bohemian",
-                content: "Futuristic, adventurous, culture and music girl"
+                content: "Creative, laid-back, and unconventional"
             },
             {
                 type: "Urban",
@@ -107,7 +103,7 @@ const FashionStyleQuiz = [
         ]
     },
     {
-        question: "If you were to win a closet makeover from 3 of your favorite stores, which would that be?",
+        question: "If you were to win a closet makeover from 3 of your favorite stores, which stores would be included?",
         answers: [
             {
                 type: "Classic",
@@ -115,7 +111,7 @@ const FashionStyleQuiz = [
             },
             {
                 type: "Trendy",
-                content: "Topshop, Macy's and H&M"
+                content: "Fprever 21, Nordstrom and H&M"
             },
             {
                 type: "Dramatic",
@@ -127,7 +123,7 @@ const FashionStyleQuiz = [
             },
             {
                 type: "Romantic",
-                content: "Victoria's Secret, Anthropologie and Laredoute"
+                content: "Victoria's Secret, Anthropologie and Windsor"
             },
             {
                 type: "Bohemian",
