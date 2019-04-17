@@ -20,10 +20,10 @@ class IconQuiz extends Component {
       answerOptions: [],
       answer: '',
       answersCount: {
-        GraceKelly: 0,
-        JackieOnassis: 0,
-        AudreyHepburn: 0,
-        MarilynMonroe: 0,
+        Sedgwick: 0,
+        Joplin: 0,
+        Hepburn: 0,
+        Monroe: 0,
       },
       result: ''
     };
