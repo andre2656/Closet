@@ -8,6 +8,11 @@ This Node/Express/React app is deployed to Heroku here: https://the-closet.herok
 
 The front-end React app auto-reloads as it's updated via webpack dev server, and the backend Express app auto-reloads independently with nodemon.
 
+Three APIs power this app:
+1. Pinterest: https://developers.pinterest.com/docs/getting-started/introduction/
+2. Mirror That Look: https://mirrorthatlook.com/#visual/visual-search-two
+3. Live Chat: 
+
 This app is comprised of 5 pages. Each is gated with user input validation for secure user access.
 
 **Marketing Site**
