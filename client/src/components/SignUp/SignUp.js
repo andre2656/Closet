@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import axios from 'axios';
 import NavBar from '../NavBar/NavBar';
 import './SignUp.css';
+import { Modal } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+
 class SignUp extends Component {
     state = {
         firstName: '',
@@ -22,6 +25,12 @@ class SignUp extends Component {
     passwordChanged = (event) => {
         this.setState({ password: event.target.value });
     }
+    handleClose = () => {
+        this.setState({ show: false });
+    }
+    handleShow = () => {
+        this.setState({ show: true });
+    }
     handleClick = () => {
         if (this.isFormValid()) {
             this.setState({
@@ -31,7 +40,7 @@ class SignUp extends Component {
             )
             
         } else {
-            alert("Please fill out all fields before submitting.");
+            this.handleShow();
         }
     }
     handlePremiumClick = () => {
@@ -47,7 +56,7 @@ class SignUp extends Component {
             
             
         } else {
-            alert("Please fill out all fields before submitting.");
+            this.handleShow();
         }
     }
     createAccount() {
@@ -124,6 +133,15 @@ class SignUp extends Component {
                                     <div className="col-md-2" />
                                 </div>
                             </form>
+                            <Modal show={this.state.show} onHide={this.handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Body>
+                                        <div>
+                                            <h5 className='row'>Please fill out all fields before submitting.</h5>
+                                        </div>
+                                    </Modal.Body>
+                                </Modal.Header>
+                            </Modal>
                         </div>
                     </div>
                 </div>
