@@ -14,7 +14,7 @@ This app is comprised of X pages. Each is gated with user input validation for s
 
 URL: https://the-closet.herokuapp.com/
 
-![Marketing Site](/images/marketing-site.png?raw=true)
+![Marketing Site](https://ibb.co/m5p7XKD)
 
 This page is our home page. It's where users would land when searching for our services. It explains them in detail and provides two buttons (one at the top and one at the bottom) to sign up. Additionally, it features a log in navigation bar for repeat users.
 
