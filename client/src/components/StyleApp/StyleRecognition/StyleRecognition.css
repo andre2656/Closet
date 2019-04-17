@@ -2,9 +2,10 @@
     float:left;
     width: 100%;
     height: auto;
-    max-width: auto;
+    max-width: 100px;
     max-height: 200px;
-    margin: 5px
+    margin: 5px;
+    margin-left: 60px;
 }
 .divStyles{
 float: left;
@@ -12,4 +13,66 @@ float: left;
 }
 .directUrl{
     
+}
+
+@media(max-width:1740px) {
+    .retunedImages {
+        margin-left: 50px;
+    }
+}
+
+@media(max-width:1604px) {
+    .retunedImages {
+        margin-left: 40px;
+    }
+}
+
+
+@media(max-width:1460px) {
+    .retunedImages {
+        margin-left: 20px;
+    }
+}
+
+@media(max-width:1272px) {
+    .retunedImages {
+        margin-left: 10px;
+    }
+}
+
+
+@media(max-width:1078px) {
+    .retunedImages {
+        margin-left: 0px;
+    }
+}
+
+@media(max-width:767px) {
+    .retunedImages {
+        margin-left: 40px;
+    }
+}
+
+@media(max-width:703px) {
+    .retunedImages {
+        margin-left: 30px;
+    }
+}
+
+@media(max-width:640px) {
+    .retunedImages {
+        margin-left: 20px;
+    }
+}
+
+@media(max-width:594px) {
+    .retunedImages {
+        margin-left: 10px;
+    }
+}
+
+@media(max-width:529px) {
+    .retunedImages {
+        margin-left: 0px;
+    }
 }
