@@ -161,7 +161,8 @@ class SettingsForm extends Component {
                                         </div>
                                     </Modal.Body>
                                 </Modal.Header>
-                            </Modal> </div>
+                            </Modal> 
+                        </div>
                     </div>
                 </div>
             </div>
