@@ -8,13 +8,11 @@ This Node/Express/React app is deployed to Heroku here: https://the-closet.herok
 
 The front-end React app auto-reloads as it's updated via webpack dev server, and the backend Express app auto-reloads independently with nodemon.
 
-This app is comprised of X pages. Each is gated with user input validation for secure user access.
+This app is comprised of 5 pages. Each is gated with user input validation for secure user access.
 
 **Marketing Site**
 
 URL: https://the-closet.herokuapp.com/
-
-![Marketing Site](https://github.com/andre2656/Closet/client/public/images/marketing-site.png)
 
 This page is our home page. It's where users would land when searching for our services. It explains them in detail and provides two buttons (one at the top and one at the bottom) to sign up. Additionally, it features a log in navigation bar for repeat users.
 
@@ -32,77 +30,26 @@ Those who choose the free account are next sent to the Settings page. Those who 
 
 **Payment**
 
+URL: https://the-closet.herokuapp.com/payment
 
+The Payment page features a straightforward credit card submission form that's mobile responsive. 
 
-## Starting the app locally
+Upon clicking Submit with all input fields filled out, the user is directed to the Settings page just as users who opted for a free account were on the last page.
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+**Settings**
 
-```
-npm install
-```
+URL: https://the-closet.herokuapp.com/settings
 
-This should install node modules within the server and the client folder.
+The Settings page asks the user 5 quick questions to help determine their curated Pinterest looks and think about their fashion tastes.
 
-While waiting for the dependencies to install, create the MySQL database by running the `motivational_quotes_schema.sql` file inside the `seeds` folder.
+Once all 5 questions are answered via the dropdowns, the user is directed to the main app.
 
-To see this example boilerplate in action, create a `.env` file in the root of this project with the following inside:
-DB_USERNAME=root
-DB_PASSWORD=whateveryourpasswordis
-DB_NAME=motivation_development
-DB_HOST=127.0.0.1
+**App**
 
-After both installations complete, run the following command in your terminal:
+URL: https://the-closet.herokuapp.com/app
 
-```
-npm run seed
-```
+The main app features quizzes to help users identify their fashion style and icon they're most similar to. Their selected settings dictate their curated looks, which feature people who look like them modeling the style they said they admire in others. To the right, there is an upload field to input an image URL and see where to buy items from a picture. They can click on both the Pinterest pictures and the links in the Outfit Details sections to see the pin and buy the item, respectively. 
 
-Then:
+At the bottom right of the page, users can request Live Chat support from a stylist. Freemium users receive a modal letting them know this feature is a premium feature, with a button to return Sign Up form to upgrade to premium. Premium users can access this feature.
 
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Your assignment
-
-1. One team memeber should create a new Github repo (or use a blank existing one if you have issues already) and push this app into it.
-Copy this folder to somewhere outside of the GitLab repo
-Rename the new folder to your project name. Then initialize it as your repo.
-Then inside that new folder:
-
-git init
-git remote add origin git@github.com:YOUR_GITHUB_USERNAME/YOUR_REPO.git
-git push -u origin master
-
-Make sure you are doing your git commands in the root of this app. You don't want this app to be a sub-folder in your repo.
-(When you go to your repo page on github.com, you should see this readme and the list of files, not a single sub-folder.)
-
-2. Each team member should verify that they can clone and edit the repo
-Make sure every member is added as a contributor in Github and has accepted the invite.
-Clone the repo.
-Then make a small change to some file, and push your changes to verify that you have access.
-
-3. Each team member needs to make their own `.env` file in the root of this project with the following inside:
-DB_USERNAME=root
-DB_PASSWORD=whateveryourpasswordis
-DB_NAME=our_group_project_database_name
-DB_HOST=127.0.0.1
-
-Note that the database name is different than the name used by the example boilerplate, as it is whatever you chose to name your group project's database.  Also be sure to supply your own password!
-
-4. Verify that every team member can run the app and see the quotes displayed.
-`npm start`
-
-5. As a group, add React Router to App.js.  Be sure to cd into the `client` folder before installing React router (remember, we use `npm` to install libraries).
-Then create a `pages` folder in your `client/src` folder.
-Then create a couple stubs of your primary pages. Add routes to these in your App.js
-Then add navigation Links to these pages.
-
-6. Go HAM and create your app.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+All pages are responsive and all data is stored in MySQL via Sequelize.
