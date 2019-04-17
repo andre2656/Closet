@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Modal } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 
 class SettingsForm extends Component {
@@ -28,6 +30,12 @@ class SettingsForm extends Component {
     handleWardrobe = (event) => {
         this.setState({ wardrobe: event.target.value })
     }
+    handleClose = () => {
+        this.setState({ show: false });
+    }
+    handleShow = () => {
+        this.setState({ show: true });
+    }
 
     signup() {
         console.log("signing up");
@@ -41,7 +49,7 @@ class SettingsForm extends Component {
         })
             .then(function (response) {
                 console.log(response);
-                window.location.pathname="/app";
+                window.location.pathname = "/app";
             })
             .catch(function (error) {
                 console.log(error);
@@ -52,7 +60,7 @@ class SettingsForm extends Component {
         console.log(this.state);
         event.preventDefault();
         if (this.state.age == null || this.state.ethnicity == null || this.state.hairColor == null || this.state.style == null || this.state.wardrobe == null) {
-            alert("Please fill out all fields before submitting.");
+            this.handleShow();
         } else {
             console.log("trying to sign up");
             this.signup();
@@ -145,7 +153,15 @@ class SettingsForm extends Component {
                                 <Link className="submit" to="/app"><button type="button" id="submitSettings" className="btn btn-dark" onClick={this.InputValidation}>Submit</button></Link>
                                 <div className="col-md-2" />
                             </form>
-                        </div>
+                            <Modal show={this.state.show} onHide={this.handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Body>
+                                        <div>
+                                            <h5 className='row'>Please fill out all fields before submitting.</h5>
+                                        </div>
+                                    </Modal.Body>
+                                </Modal.Header>
+                            </Modal> </div>
                     </div>
                 </div>
             </div>
