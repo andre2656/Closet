@@ -2,16 +2,18 @@
 import React from 'react';
 // import API from "../../../utils/API";
 import $ from 'jquery'
+import './StyleRecognition.css'
 
 class StyleRecognition extends React.Component {
     state = {
         data: [],
-        img: "https://cdn.shopify.com/s/files/1/0033/7939/6672/products/product_906861_royal-blue-jacquar_1_400x.jpg?v=1554340311"
+        img: null
     };
     componentDidMount(){
         // API.getStyles('https://cdn.shopify.com/s/files/1/0033/7939/6672/products/product_906861_royal-blue-jacquar_1_400x.jpg?v=1554340311')
         //     .then(res => console.log( res))
         //     .catch(err => console.log(err));
+        this.setState({img: this.props.img})
 
 
         $( () => {
@@ -19,7 +21,7 @@ class StyleRecognition extends React.Component {
                 // Request parameters
                 "image": this.state.img,
                 // "gender": "Female",
-                "limit": "15",
+                "limit": "5",
             };
 
             $.ajax({
@@ -34,7 +36,7 @@ class StyleRecognition extends React.Component {
                 data: "{body}",
             })
                 .done(function (data) {
-                    alert("success");
+                    // alert("success");
                     console.log(data)
                     for (let t = 0; t < data.result.length; t++) {
                         for (let i = 0; i < data.result[t].products.length; i++) {
@@ -48,14 +50,14 @@ class StyleRecognition extends React.Component {
                             brandName.append(data.result[t].products[i].retailer.name);
                             directUrl.attr('href', data.result[t].products[i].direct_url);
                             directUrl.append(brandName)
-
-
-
-
                             img.attr('src', data.result[t].products[i].image);
-                            img.addClass('retunedImages')
+                            directUrl.addClass('directUrl')
+                            img.addClass('retunedImages');
                             div.append(directUrl);
                             div.append(img);
+                            div.addClass('divStyles');
+                            div.addClass('col-md-4')
+                            // div.addClass('col-md-12')
 
                             $('#pictures').append(div);
 
@@ -72,7 +74,7 @@ class StyleRecognition extends React.Component {
     };
     render() {
         return (
-        <div id= 'pictures'>
+        <div id= 'pictures' className= 'col-md-12'>
 
         </div>
             );
