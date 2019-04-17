@@ -88,7 +88,7 @@ class SignUp extends Component {
                         <div className="col-md-2" />
                         <div className="col-md-8">
                             <h2>Get Started for Free or Level Up With Premium</h2>
-                            <p>With a free Closet account, you can take quizzes and access personalized fashion pins to help cultivate your perfect look. With premium, you enjoy all the great features of a free account, but with access to a stylist who's available to chat at any time along with buy-now buttons to make in-app purchases!</p>
+                            <p>With a free Closet account, you can take quizzes, shop from a photo and access personalized fashion pins to help cultivate your perfect look. With premium, you enjoy all the great features of a free account, but with access to a stylist who's available to chat at any time!</p>
                             <br />
                             <form>
                                 <div className="form-group row">
