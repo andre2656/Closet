@@ -1,10 +1,38 @@
-# Create React Express App
+# The Closet
 
-## About This Boilerplate
+Ever feel like you're keeping up with the Joneses? The Closet makes it easy to curate a style that's 100% you — effortlessly! Use our fun quizzes to discover your true style, get inspired by new trends, make easy in-app purchases on items you like, and get closer to owning your dream closet.
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+## About This App
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+This Node/Express/React app is deployed to Heroku here: https://the-closet.herokuapp.com/
+
+The front-end React app auto-reloads as it's updated via webpack dev server, and the backend Express app auto-reloads independently with nodemon.
+
+This app is comprised of X pages. Each is gated with user input validation for secure user access.
+
+**Marketing Site**
+
+URL: https://the-closet.herokuapp.com/
+
+![Marketing Site](/images/marketing-site.png?raw=true)
+
+This page is our home page. It's where users would land when searching for our services. It explains them in detail and provides two buttons (one at the top and one at the bottom) to sign up. Additionally, it features a log in navigation bar for repeat users.
+
+The ordering of elements was adjusted for mobile responsiveness with the use of flexbox.
+
+**Sign Up**
+
+URL: https://the-closet.herokuapp.com/sign-up
+
+Upon clicking one of the two sign up buttons on the Marketing Site, the new user is sent to a Sign Up page. The page consists of one form that requests a first name, last name, email and password.
+
+The user then has a choice: Start with a free account or upgrade to a premium account. A premium account offers all the same features as the free account (curated Pinterest pins, quizzes and shop from an uploaded image) with the addition of live chat support with a stylist to assist with in-app purchases and fashion advice.
+
+Those who choose the free account are next sent to the Settings page. Those who sign up for Premium are then sent to a Payment page.
+
+**Payment**
+
+
 
 ## Starting the app locally
 
