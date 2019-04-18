@@ -23,6 +23,8 @@ This page is our home page. It's where users would land when searching for our s
 
 The ordering of elements was adjusted for mobile responsiveness with the use of flexbox.
 
+![alt text](https://github.com/andre2656/Closet/blob/master/client/public/images/marketingPage.JPG)
+
 **Sign Up**
 
 URL: https://the-closet.herokuapp.com/sign-up
@@ -33,6 +35,8 @@ The user then has a choice: Start with a free account or upgrade to a premium ac
 
 Those who choose the free account are next sent to the Settings page. Those who sign up for Premium are then sent to a Payment page.
 
+![alt text](https://github.com/andre2656/Closet/blob/master/client/public/images/signOn.JPG)
+
 **Payment**
 
 URL: https://the-closet.herokuapp.com/payment
@@ -41,6 +45,9 @@ The Payment page features a straightforward credit card submission form that's m
 
 Upon clicking Submit with all input fields filled out, the user is directed to the Settings page just as users who opted for a free account were on the last page.
 
+![alt text](https://github.com/andre2656/Closet/blob/master/client/public/images/payment.JPG)
+
+
 **Settings**
 
 URL: https://the-closet.herokuapp.com/settings
@@ -48,6 +55,8 @@ URL: https://the-closet.herokuapp.com/settings
 The Settings page asks the user 5 quick questions to help determine their curated Pinterest looks and think about their fashion tastes.
 
 Once all 5 questions are answered via the dropdowns, the user is directed to the main app.
+
+![alt text](https://github.com/andre2656/Closet/blob/master/client/public/images/settings.JPG)
 
 **App**
 
@@ -58,3 +67,5 @@ The main app features quizzes to help users identify their fashion style and ico
 At the bottom right of the page, users can request Live Chat support from a stylist. Freemium users receive a modal letting them know this feature is a premium feature, with a button to return Sign Up form to upgrade to premium. Premium users can access this feature.
 
 All pages are responsive and all data is stored in MySQL via Sequelize.
+
+![alt text](https://github.com/andre2656/Closet/blob/master/client/public/images/mainApp.JPG)
