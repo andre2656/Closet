@@ -14,4 +14,12 @@ router.post("/settings", (req, res) => {
         res.json({message: "Settings Saved"});
     })
 })
+
+router.get('/ethnicity', (req,res) => {
+    db.Settings.findOne({ 
+        where: {email: req.body.email}
+    }).then(settings => {
+        res.json(settings)
+    })
+})
 module.exports = router;

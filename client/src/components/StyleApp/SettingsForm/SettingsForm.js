@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import loginController from "../../../controllers/LoginController"
 
 class SettingsForm extends Component {
     state = {
@@ -12,6 +12,22 @@ class SettingsForm extends Component {
         style: null,
         wardrobe: null
     };
+    componentDidMount() {
+        console.log("componentDidMount");
+        loginController.addUserChangedListener(this.setUser);
+
+        loginController.recheckLogin();
+    }
+
+    componentWillUnmount() {
+        console.log("WillUnmount");
+        loginController.removeUserChangedListener(this.setUser);
+    }
+
+    setUser = (user) => {
+        console.log('setUser Email- ' + user.user.email);
+        this.setState({ email: user.user.email });
+    }
 
     handleAge = (event) => {
         this.setState({ age: event.target.value })

@@ -2,15 +2,33 @@ import React, { Component } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Payment.css';
-
+import loginController from "../../controllers/LoginController"
 class Payment extends Component {
     state = {
+        email: '',
         cardholderName: '',
         cvv: '',
         cardNumber: '',
         month: '',
         year: ''
     };
+
+    componentDidMount() {
+        console.log("componentDidMount");
+        loginController.addUserChangedListener(this.setUser);
+
+        loginController.recheckLogin();
+    }
+
+    componentWillUnmount() {
+        console.log("WillUnmount");
+        loginController.removeUserChangedListener(this.setUser);
+    }
+
+    setUser = (user) => {
+        console.log('setUser Email- ' + user.user.email);
+        this.setState({ email: user.user.email });
+    }
 
     handleCardholderName = (event) => {
         this.setState({ cardholderName: event.target.value })
@@ -31,6 +49,7 @@ class Payment extends Component {
     submitPayment() {
         console.log("submitting payment");
         axios.post('api/pay/payments', {
+            email: this.state.email,
             cardholderName: this.state.cardholderName,
             cvv: this.state.cvv,
             cardNumber: this.state.cardNumber,

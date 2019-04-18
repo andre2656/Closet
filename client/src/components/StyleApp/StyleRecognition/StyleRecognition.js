@@ -74,7 +74,7 @@ class StyleRecognition extends React.Component {
 
                     })
                     .fail(function () {
-                        alert("error");
+                        console.log("error");
                     });
             });
         }

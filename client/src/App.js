@@ -9,7 +9,7 @@ import Payment from './components/SignUp/Payment';
 import IconQuiz from './components/Quizzes/IconQuiz/IconQuiz';
 import FashionStyleQuiz from './components/Quizzes/FashionStyleQuiz/FashionStyleQuiz'
 import loginController from "./controllers/LoginController"
-// import Styles from './components/StyleApp/StyleRecognition/StyleRecognition'
+import Chat from './components/StyleApp/Chat/Index.js'
 
 class App extends Component {
 
@@ -45,7 +45,7 @@ class App extends Component {
           <Route exact path="/app" component={StyleApp} />
           <Route exact path="/iconq" component={IconQuiz} />
           <Route exact path="/fsq" component={FashionStyleQuiz} />
-          {/* <Route exact path= '/styles' component={Styles}/> */}
+          <Route exact path= "/chat" component={Chat}/>
         </div>
       </Router>
     );
