@@ -13,8 +13,8 @@ const Quizzes = () => {
             <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="1" className="active"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="2" className="active"></li>
                 </ol>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
@@ -35,10 +35,11 @@ const Quizzes = () => {
                     </div>
                 </div>
                 <div className="carousel-item">
-                        <img src="https://patternobserver.com/wp-content/uploads/2014/05/IMG-12-palette-picking.png" className="d-block w-100" alt="" />
+                        <img src="images/SkinTone.jpg" className="d-block w-100" alt="" />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Coloring</h5>
-                            <p>What is your ideal color palette.</p>
+                            <Link className="quiz=start" to="/stq"><button type="button" className="btn btn-dark">Start Quiz</button></Link>
+                            <p>What is your skin's undertone?</p>
                         </div>
                     </div>
                 <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
