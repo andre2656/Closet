@@ -20,6 +20,7 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bcrypt": "^3.0.5",
     "bluebird": "^3.5.4",
     "connect-session-sequelize": "^6.0.0",
@@ -28,6 +29,7 @@
     "express": "^4.16.3",
     "express-session": "^1.16.1",
     "if-env": "^1.0.4",
+    "jquery": "^3.4.0",
     "mysql2": "^1.6.5",
     "node-pinterest": "0.0.4",
     "request-promise": "^4.2.4",

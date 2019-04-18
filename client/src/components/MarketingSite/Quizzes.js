@@ -1,6 +1,5 @@
 
-import React, { Component } from "react";
-import axios from 'axios';
+import React from "react";
 import './MarketingSite.css';
 import './Quizzes.css';
 
@@ -16,7 +15,7 @@ const Quizzes = () => {
                     <p>Take quick quizzes to hone in on your dream style and adjust your preferences to see fashion that speaks to you.</p>
                 </div>
                 <div className="col-md-4">
-                    <img id="quiz-image" src="images/marketing-site-quiz.jpg" />
+                    <img id="quiz-image" src="images/marketing-site-quiz.jpg" alt= 'quiz' />
                 </div>
                 <div className="col-md-2" style={padding} />
             </div>

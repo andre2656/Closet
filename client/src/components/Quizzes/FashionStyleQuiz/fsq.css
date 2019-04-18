@@ -10,6 +10,9 @@
     text-align: left;
     margin-left: 5%;
 }
+.resultsRow{
+    text-align: center;
+}
 .answerOption{
     text-align: left;
     margin-left: 33%;
@@ -17,4 +20,9 @@
 }
 .quizLabel{
     margin-left: 5px; 
+}
+.resultDescr{
+    margin-left:10%;
+    margin-right:10%;
+    margin-top: 1.5%;
 }

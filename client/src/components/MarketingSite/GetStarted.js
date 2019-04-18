@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import axios from 'axios';
+import React from "react";
 import {Link} from 'react-router-dom';
 
 
@@ -12,7 +11,7 @@ const GetStarted = () => {
                 <div className="col-md-2" />
                 <div className="col-md-8">
                     <h2>Get Started Today</h2>
-                    <p>A more fashionable closet is a few clicks away. Begin up for free to access recommendations built for you and love your wardrobe.</p>
+                    <p>A more fashionable closet is a few clicks away. Sign up for free to access recommendations built for you, and love your wardrobe.</p>
                     <br />
                 </div>
                 <div className="col-md-2" />
