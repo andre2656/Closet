@@ -1,10 +1,28 @@
 .card-image {
     margin: 10px;
+    width: 90px;
 }
 
 h2 {
     margin-bottom: 50px;
 }
+
+#visa {
+    margin-left: -35px;
+}
+
+@media(max-width:1190px){
+    #payment-btn {
+        margin-left: -15px;
+    }
+}
+
+@media(max-width:980px){
+    #payment-btn {
+        margin-left: -35px;
+    }
+}
+
 
 @media(max-width:767px){
     #payment-btn {
@@ -34,9 +52,33 @@ h2 {
 
 
     .card-image {
-        margin-left: 75px;
+        width: 90px;
+        margin: 35px;
     }
 
+    #visa {
+        margin-left: 70px;
+    }
+
+    #payment-btn {
+        margin-left: 35px;
+    }
+
+}
+
+@media(max-width:513px){
+    .payment-input {
+        width: 430px;
+    }
+
+    .card-image {
+        width: 90px;
+        margin: 25px;
+    }
+
+    #visa {
+        margin-left: 40px;
+    }
 }
 
 @media(max-width:450px){
@@ -45,6 +87,11 @@ h2 {
     }
 
     .card-image {
-        margin-left: 50px;
+        width: 90px;
+        margin: 10px;
+    }
+
+    #visa {
+        margin-left: 40px;
     }
 }
