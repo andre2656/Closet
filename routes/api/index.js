@@ -25,6 +25,6 @@ router.use('/pay', Payment);
 
 router.use('/api', apiRoutes);
 
-router.use('chat', Chat);
+router.use('/chat', Chat);
 
 module.exports = router;

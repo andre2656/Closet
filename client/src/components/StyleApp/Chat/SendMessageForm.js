@@ -30,7 +30,7 @@ class SendMessageFrom extends React.Component {
         this.setState({message: event.target.value});
     }
     sendMessage= () => {
-        axios.post('api/chat/send', {
+        axios.post('/api/chat/send', {
             email: this.state.email,
             message: this.state.message,
             user: this.state.user
