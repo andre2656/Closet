@@ -13,12 +13,12 @@ Two APIs power this app:
 2. Mirror That Look: https://mirrorthatlook.com/#visual/visual-search-two
 
 NPM Packages and Libraries:
-- jQuery
-- React
-- React-Router-Dom
-- Validator
-- Bootstrap
-- React-Bootstrap
+- jQuery: https://jquery.com/
+- React: https://reactjs.org/
+- React-Router-Dom: https://www.npmjs.com/package/react-router-dom
+- Validator: https://www.npmjs.com/package/validator
+- Bootstrap: https://getbootstrap.com/
+- React-Bootstrap: https://react-bootstrap.github.io/
 
 This app is comprised of 5 pages. Each is gated with user input validation for secure user access.
 
