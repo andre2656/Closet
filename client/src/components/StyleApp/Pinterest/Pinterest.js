@@ -9,19 +9,16 @@ export default class PinterestListItem extends React.Component {
         data: ''
     }
     componentDidMount() {
-        console.log("componentDidMount");
-        loginController.addUserChangedListener(this.setUser);
-
-        loginController.recheckLogin();
-
-        
-    }
-    componentDidMount() {
         if (!window.doBuild) {
             this.preloadWidgetScript();
         } else {
             window.doBuild();
         }
+
+        console.log("componentDidMount");
+        loginController.addUserChangedListener(this.setUser);
+
+        loginController.recheckLogin();
 
         if ('ethnicity' === 'Black or African American'){
             this.setState({ board: 'project3-b-fashion'})

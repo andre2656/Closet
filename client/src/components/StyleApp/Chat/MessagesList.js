@@ -32,39 +32,41 @@ componentWillReceiveProps = (props) => {
        
 }
 renderMessages = () => {
-    let text = $('<li>');
-    let emailDiv = $('<div>');
-    let messageDiv = $('<div>');
+    
         // text.empty();
         // emailDiv.empty();
         // messageDiv.empty();
         $('.message-list').empty();
     for (let i= 0; i < this.state.messages.length; i++){
+       
+        let userMessage = $('<p>');
+        let emailDiv = $('<div>');
+        let messageDiv = $('<div>');
         console.log(this.state.messages[i])
         
         emailDiv.text(this.state.messages[i].email);
         messageDiv.text(this.state.messages[i].message);
 
 
-        text.append(messageDiv);
-        text.append(emailDiv);
+        userMessage.append(messageDiv);
+        userMessage.append(emailDiv);
 
         if (!this.state.messages[i].user){
-            text.attr('id', 'stylistText');
+            userMessage.attr('id', 'stylistText');
         } else if (this.state.messages[i]){
-            text.attr('id', 'userText');
+            userMessage.attr('id', 'userText');
         }
         
 
         
-        $('.message-list').append(text);
+        $('.message-list').append(userMessage);
 
     }
 }
     render() {
         return (
-            <div>
-                <ul className="message-list"></ul>
+            <div className= 'message-list'>
+                
             </div>
             
         )

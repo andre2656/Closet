@@ -1,6 +1,5 @@
 import React from 'react';
 import Title from './Title'
-import MessageList from './MessagesList'
 import SendMessageForm from './SendMessageForm'
 
 class Chat extends React.Component {
@@ -12,9 +11,6 @@ class Chat extends React.Component {
         return (
             <div className='chatHead'>
                 <Title/>
-                <MessageList 
-                messages= {this.state.messages}
-                />
                 <SendMessageForm/>
             </div>
         )

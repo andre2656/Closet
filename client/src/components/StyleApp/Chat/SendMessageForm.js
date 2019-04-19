@@ -31,6 +31,12 @@ class SendMessageFrom extends React.Component {
         this.setState({ message: event.target.value });
     }
 
+    submitClicked = () => { 
+        this.sendMessage();
+        this.setState({message: ''});
+        this.getMessages();
+    }
+
 
     sendMessage = () => {
         axios.post('/api/chat/send', {
@@ -40,27 +46,20 @@ class SendMessageFrom extends React.Component {
         })
             .then((response) => {
                 console.log(response);
-                this.getMessages()
+                this.getMessages();
             })
             .catch(function (error) {
                 console.log(error);
             });
-
-        this.setState();
     }
-    getMessages = (messages) => {
+
+    getMessages = () => {
         axios.get('/api/chat/receive/', {
             params: {
                 email: this.state.email
             }
         }).then((response) => {
-            // console.log(response)
             this.setState({ messages: response.data })
-            // .map(message => {
-            //     this.state.messages.push(message)
-            // }, 
-            console.log(this.state.messages)
-
         }).catch(function (error) {
             console.log(error);
         });
@@ -74,8 +73,8 @@ class SendMessageFrom extends React.Component {
                 <MessageList
                     messages={this.state.messages}
                 />
-                <input id='chatInput' style={{ marginRight: "5px" }} type="text" onChange={this.messageChanged} />
-                <button onClick={this.sendMessage} type='submit' className="btn btn-dark btn-file">Send</button>
+                <input id='chatInput' style={{ marginRight: "5px" }} type="text" onChange={this.messageChanged} value={this.state.message} />
+                <button onClick={this.submitClicked} type='submit' className="btn btn-dark btn-file">Send</button>
             </div>
 
         )
