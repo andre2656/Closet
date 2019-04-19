@@ -12,9 +12,9 @@ router.post("/send", (req, res) => {
         res.json({ message: "message Saved" });
     })
 });
-router.get('/recieve', (req, res) => {
+router.get('/receive', (req, res) => {
     db.Chat.findAll({
-        where: {email: req.params.email}
+        where: {email: req.query.email}
     }).then(messages => {
         console.log(messages)
         res.json(messages)

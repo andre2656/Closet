@@ -1,35 +1,38 @@
 import React from 'react'
 import loginController from "../../../controllers/LoginController"
-import axios from'axios'
+import axios from 'axios'
+import MessageList from './MessagesList'
 
 class SendMessageFrom extends React.Component {
 
     state = {
         user: true,
         email: '',
-        message: ''
+        message: '',
+        messages: []
     }
     componentDidMount() {
-        console.log("componentDidMount");
         loginController.addUserChangedListener(this.setUser);
-
         loginController.recheckLogin();
     }
 
     componentWillUnmount() {
-        console.log("WillUnmount");
         loginController.removeUserChangedListener(this.setUser);
     }
 
     setUser = (user) => {
-        console.log('setUser Email- ' + user.user.email);
-        this.setState({ email: user.user.email });
+        this.setState({ email: user.user.email },
+            () => {
+                this.getMessages();
+            });
     }
 
     messageChanged = (event) => {
-        this.setState({message: event.target.value});
+        this.setState({ message: event.target.value });
     }
-    sendMessage= () => {
+
+
+    sendMessage = () => {
         axios.post('/api/chat/send', {
             email: this.state.email,
             message: this.state.message,
@@ -37,31 +40,42 @@ class SendMessageFrom extends React.Component {
         })
             .then((response) => {
                 console.log(response);
-           
-
+                this.getMessages()
             })
             .catch(function (error) {
                 console.log(error);
             });
+
+        this.setState();
     }
-    getMesages= () => { 
-        axios.get('api/chat/recieve', {
+    getMessages = (messages) => {
+        axios.get('/api/chat/receive/', {
             params: {
                 email: this.state.email
             }
         }).then((response) => {
-            console.log(response)
+            // console.log(response)
+            this.setState({ messages: response.data })
+            // .map(message => {
+            //     this.state.messages.push(message)
+            // }, 
+            console.log(this.state.messages)
+
         }).catch(function (error) {
             console.log(error);
         });
-    } 
+
+    }
 
 
     render() {
         return (
             <div>
+                <MessageList
+                    messages={this.state.messages}
+                />
                 <input id='chatInput' style={{ marginRight: "5px" }} type="text" onChange={this.messageChanged} />
-                 <button onClick={this.sendMessage} type='submit' className="btn btn-dark btn-file">Send</button>
+                <button onClick={this.sendMessage} type='submit' className="btn btn-dark btn-file">Send</button>
             </div>
 
         )
