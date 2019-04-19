@@ -12,6 +12,7 @@ class NavId extends Component {
 
       logout = event => {
         this.setState({ loggedIn: false });
+        loginController.logout();
       }
 
     componentDidMount() {
