@@ -36,16 +36,6 @@ class NavBar extends Component {
     this.setState({ show: true });
   }
 
-  InputValidation = (event) => {
-    console.log(this.state);
-    event.preventDefault();
-    if (this.state.email === '' || this.state.password === '') {
-      alert("Missing credentials, cannot log in.");
-    } else {
-      console.log("Trying to log in");
-    }
-  }
-
   render() {
     if (this.state.loggedIn) {
       return <Redirect to="/app" />;
@@ -67,7 +57,7 @@ class NavBar extends Component {
           <Modal.Header closeButton>
             <Modal.Body>
               <div>
-                <h5 className='row'>Missing credentials, cannot log in.</h5>
+                <h5 className='row'>Missing or invalid credentials. Cannot log in.</h5>
               </div>
             </Modal.Body>
           </Modal.Header>

@@ -4,6 +4,8 @@ import NavBar from '../NavBar/NavBar';
 import './SignUp.css';
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import validator from 'validator';
+
 
 class SignUp extends Component {
     state = {
@@ -82,7 +84,7 @@ class SignUp extends Component {
             });
     }
     isFormValid = () => {
-        if (this.state.firstName === '' || this.state.lastName === '' || this.state.email === '' || this.state.password === '') {
+        if (this.state.firstName === '' || this.state.lastName === '' ||  this.state.email === '' || !validator.isEmail(this.state.email) || this.state.password === '') {
             return false;
         } else {
             return true;
@@ -137,7 +139,7 @@ class SignUp extends Component {
                                 <Modal.Header closeButton>
                                     <Modal.Body>
                                         <div>
-                                            <h5 className='row'>Please fill out all fields before submitting.</h5>
+                                            <h5 className='row'>Please fill out all fields and provide a valid email address.</h5>
                                         </div>
                                     </Modal.Body>
                                 </Modal.Header>

@@ -4,8 +4,6 @@ const db = require("../../models");
 const authMiddleware = require("./authMiddleware");
 const bcrypt = require('bcrypt');
 
-
-
 router.post("/login", (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
@@ -15,12 +13,12 @@ router.post("/login", (req, res) => {
         user => {
             try {
                 if (!user) {
-                    throw new Error("Missing credentials. Cannot log in.");
+                    throw new Error("Missing or invalid credentials. Cannot log in.");
                 }
 
                 // See if the password hash matches what we have in the database
                 if (!bcrypt.compareSync(password, user.password)) {
-                    throw new Error("Missing credentials. Cannot log in.");
+                    throw new Error("Missing or invalid credentials. Cannot log in.");
                 }
 
                setLoginCookie(user, req, res);
