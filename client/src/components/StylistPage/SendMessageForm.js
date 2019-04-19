@@ -1,40 +1,30 @@
 import React from 'react'
-import loginController from "../../../controllers/LoginController"
 import axios from 'axios'
 import MessageList from './MessagesList'
 import './Chat.css';
 
 class SendMessageFrom extends React.Component {
-
-    state = {
-        user: true,
-        email: '',
-        message: '',
-        messages: []
+    constructor(props) {
+        super(props);
+        // Don't call this.setState() here!
+        this.state = {
+            email: this.props.email,
+            user: false,
+            message: '',
+            messages: []
+        };
     }
     componentDidMount() {
-        loginController.addUserChangedListener(this.setUser);
-        loginController.recheckLogin();
-    }
-
-    componentWillUnmount() {
-        loginController.removeUserChangedListener(this.setUser);
-    }
-
-    setUser = (user) => {
-        this.setState({ email: user.user.email },
-            () => {
-                this.getMessages();
-            });
+        this.getMessages();
     }
 
     messageChanged = (event) => {
         this.setState({ message: event.target.value });
     }
 
-    submitClicked = () => { 
+    submitClicked = () => {
         this.sendMessage();
-        this.setState({message: ''});
+        this.setState({ message: '' });
     }
 
 
@@ -45,10 +35,8 @@ class SendMessageFrom extends React.Component {
             message: this.state.message,
             user: this.state.user
         }).then((response) => {
-                // console.log(response.data);
-                // this.getMessages();
-                this.setState({ messages: response.data })
-            })
+            this.setState({ messages: response.data })
+        })
             .catch(function (error) {
                 console.log(error);
             });
@@ -74,11 +62,11 @@ class SendMessageFrom extends React.Component {
                 <MessageList
                     messages={this.state.messages}
                 />
-                <div className= 'col-md-12'>
+                <div className='col-md-12'>
                     <input id='chatInput' style={{ marginRight: "5px" }} type="text" onChange={this.messageChanged} value={this.state.message} />
                     <button onClick={this.submitClicked} type='submit' className="btn btn-dark btn-file">Send</button>
                 </div>
-                
+
             </div>
 
         )
