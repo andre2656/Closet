@@ -7,7 +7,7 @@ import { Button } from 'react-bootstrap';
 
 class UploadIdeas extends Component {
     state = {
-        image: 'https://cdn.shopify.com/s/files/1/0293/9277/products/Fashion_Nova_07-14-17-1067_760x.jpg?v=1500487929',
+        image: 'http://wachabuy.com/wp-content/uploads/2017/09/fall-outfit-ideas-olive-bell-sleeve-knit-ripped-denim-436x1024.jpg',
         img: '',
         getImage: null
     };
@@ -57,10 +57,10 @@ class UploadIdeas extends Component {
 
                 <div>
                     <div>
-                        <h1>Outfit Details</h1>
+                        <h1>Outfit Recommendations and Results</h1>
                     </div>
                     <div className="card" id='uploadCard' >
-                        <div className="card-header">See Results Based on Your Photo Upload</div>
+                        <div className="card-header">Here are Our Staff Picks for You. Upload a Photo Above for Updated Results.</div>
                         <div className="card-body" id="outfitResults" style={{ height: "400px", overflow: "scroll" }}>
                             <Recognition
                                 img={this.state.image}
