@@ -3,11 +3,9 @@ import {Link} from 'react-router-dom';
 
 
 const GetStarted = () => {
-    let content = { marginTop: "80px" }
-    let padding = { paddingBottom: "60px" }
     return (
         <div className="container">
-            <div className="row" style={content}>
+            <div className="row" style={{marginTop: "80px"}}>
                 <div className="col-md-1" />
                 <div className="col-md-10">
                     <h2>Get Started Today</h2>
@@ -16,12 +14,12 @@ const GetStarted = () => {
                 </div>
                 <div className="col-md-1" />
             </div>
-            <div className="row">
+            <div className="row" style={{marginBottom: "60px"}} >
                 <div className="col-md-1" />
                 <div className="col-md-12">
-                <Link className="get-started-now" to="/sign-up"><button type="button" className="btn btn-dark">Sign Up Today</button></Link>
+                    <Link className="get-started-now" to="/sign-up"><button type="button" className="btn btn-dark">Sign Up Today</button></Link>
                 </div>
-                <div className="col-md-1" style={padding}/>
+                <div className="col-md-1"/>
             </div>
         </div>
     )
