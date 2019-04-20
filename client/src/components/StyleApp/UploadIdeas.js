@@ -57,10 +57,10 @@ class UploadIdeas extends Component {
 
                 <div>
                     <div>
-                        <h1>Outfit Recommendations and Results</h1>
+                        <h1>Staff Picks and Results</h1>
                     </div>
                     <div className="card" id='uploadCard' >
-                        <div className="card-header">Here are Our Staff Picks for You. Upload a Photo Above for Updated Results.</div>
+                        <div className="card-header">Upload a Photo Above for Updated Results</div>
                         <div className="card-body" id="outfitResults" style={{ height: "400px", overflow: "scroll" }}>
                             <Recognition
                                 img={this.state.image}
