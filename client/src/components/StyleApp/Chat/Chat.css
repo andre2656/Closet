@@ -1,0 +1,20 @@
+#message-list{
+    /* float:left;
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+    max-height: 200px; */
+
+     height: 400px;
+     overflow: scroll 
+    
+}
+
+
+#userText{
+    width: 40%;
+    height: auto;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    
+}

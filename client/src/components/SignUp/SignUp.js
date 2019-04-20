@@ -15,6 +15,7 @@ class SignUp extends Component {
         password: '',
         premium: false
     };
+
     firstNameChanged = (event) => {
         this.setState({ firstName: event.target.value });
     };
@@ -62,7 +63,6 @@ class SignUp extends Component {
         }
     }
     createAccount() {
-        console.log(this.state)
         axios.post('api/Users/sign-up', {
             firstName: this.state.firstName,
             lastName: this.state.lastName,

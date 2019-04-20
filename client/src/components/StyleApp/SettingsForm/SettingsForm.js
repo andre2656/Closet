@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+
+import loginController from "../../../controllers/LoginController"
+
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+
 
 
 class SettingsForm extends Component {
@@ -14,6 +18,22 @@ class SettingsForm extends Component {
         style: null,
         wardrobe: null
     };
+    componentDidMount() {
+        console.log("componentDidMount");
+        loginController.addUserChangedListener(this.setUser);
+
+        loginController.recheckLogin();
+    }
+
+    componentWillUnmount() {
+        console.log("WillUnmount");
+        loginController.removeUserChangedListener(this.setUser);
+    }
+
+    setUser = (user) => {
+        console.log('setUser Email- ' + user.user.email);
+        this.setState({ email: user.user.email });
+    }
 
     handleAge = (event) => {
         this.setState({ age: event.target.value })
@@ -39,6 +59,7 @@ class SettingsForm extends Component {
 
     signup() {
         console.log("signing up");
+        console.log(this.state)
         axios.post('api/set/settings', {
             email: this.state.email,
             age: this.state.age,

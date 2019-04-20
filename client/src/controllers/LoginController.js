@@ -33,7 +33,7 @@ class LoginController {
     recheckLogin(loginCallback) {
         axios.get("/api/Users/getUser").then(response => {
             let user = response.data || null;
-            console.log(user)
+            // console.log(user)
 
             this.setUser(user);
 

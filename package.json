@@ -23,6 +23,7 @@
     "axios": "^0.18.0",
     "bcrypt": "^3.0.5",
     "bluebird": "^3.5.4",
+    "chatkit": "0.0.1-security",
     "connect-session-sequelize": "^6.0.0",
     "cookie-parser": "^1.4.4",
     "dotenv": "^7.0.0",

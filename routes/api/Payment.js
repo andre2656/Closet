@@ -4,6 +4,7 @@ const db = require("../../models");
 
 router.post("/payments", (req, res) => {
     db.Payment.create({
+        email: req.body.email,
         cardholderName: req.body.cardholderName,
         cvv: req.body.cvv,
         cardNumber: req.body.cardNumber,

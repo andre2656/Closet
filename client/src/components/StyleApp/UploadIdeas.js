@@ -48,8 +48,10 @@ class UploadIdeas extends Component {
                 <div className="card" id='uploadCard' >
                     <div className="card-header">Upload an Outfit to Find Where to Buy It</div>
                     <div className="card-body">
+
                         <div className='row' style={{ justifyContent: "center" }}>
                             <input id='imageUrl' style={{ marginRight: "5px" }} type="text" onChange={this.imageChanged} value={this.state.img} /> <button onClick={this.buttonClicked} type='submit' className="btn btn-dark btn-file">Upload Image URL</button>
+
                         </div>
 
                     </div>
