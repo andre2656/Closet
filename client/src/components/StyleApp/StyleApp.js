@@ -3,7 +3,8 @@ import Quizzes from './Quizzes';
 import NavId from './NavId';
 import Pinterest from './Pinterest/Pinterest'
 import UploadIdeas from './UploadIdeas';
-import LiveChat from './LiveChat';
+// import LiveChat from './LiveChat';
+
 
 let StyleApp = () => {
 
@@ -15,19 +16,19 @@ let StyleApp = () => {
                         <div className='row'>
                                 <div className='col-md-3' />
                                 <div className='col-md-6'>
-                                        <Quizzes/>
+                                        <Quizzes />
                                 </div>
                                 <div className='col-md-3' />
                         </div>
-                        <br/>
+                        <br />
                         <div className='row'>
                                 <div className='col-md-6'>
-                                        <Pinterest/>
+                                        <Pinterest />
                                 </div>
                                 <div className='col-md-6'>
-                                        <UploadIdeas/>
-                                        <br/>
-                                        <LiveChat />
+                                        <UploadIdeas />
+                                        {/* <br />
+                                        <LiveChat /> */}
                                 </div>
                         </div>
                 </div>
