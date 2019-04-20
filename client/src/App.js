@@ -7,10 +7,13 @@ import StyleApp from './components/StyleApp/StyleApp';
 import SettingsForm from './components/StyleApp/SettingsForm/SettingsForm';
 import Payment from './components/SignUp/Payment';
 import IconQuiz from './components/Quizzes/IconQuiz/IconQuiz';
-import FashionStyleQuiz from './components/Quizzes/FashionStyleQuiz/FashionStyleQuiz'
-import loginController from "./controllers/LoginController"
 import Chat from './components/StyleApp/Chat/Index.js'
 import stylistChat from './components/StylistPage/MessageNav'
+import FashionStyleQuiz from './components/Quizzes/FashionStyleQuiz/FashionStyleQuiz';
+import loginController from "./controllers/LoginController";
+import SkinToneQuiz from "./components/Quizzes/SkinToneQuiz/SkinToneQuiz";
+// import Styles from './components/StyleApp/StyleRecognition/StyleRecognition'
+
 
 class App extends Component {
 
@@ -48,6 +51,9 @@ class App extends Component {
           <Route exact path="/fsq" component={FashionStyleQuiz} />
           <Route exact path= "/chat" component={Chat}/>
           <Route exact path="/stylistChat" component={stylistChat} />
+          <Route exact path="/stq" component={SkinToneQuiz} />
+          {/* <Route exact path= '/styles' component={Styles}/> */}
+
         </div>
       </Router>
     );

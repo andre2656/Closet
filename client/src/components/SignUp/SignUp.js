@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import axios from 'axios';
 import NavBar from '../NavBar/NavBar';
 import './SignUp.css';
+import { Modal } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import validator from 'validator';
+
+
 class SignUp extends Component {
     state = {
         firstName: '',
@@ -23,6 +28,12 @@ class SignUp extends Component {
     passwordChanged = (event) => {
         this.setState({ password: event.target.value });
     }
+    handleClose = () => {
+        this.setState({ show: false });
+    }
+    handleShow = () => {
+        this.setState({ show: true });
+    }
     handleClick = () => {
         if (this.isFormValid()) {
             this.setState({
@@ -32,7 +43,7 @@ class SignUp extends Component {
             )
             
         } else {
-            alert("Please fill out all fields before submitting.");
+            this.handleShow();
         }
     }
     handlePremiumClick = () => {
@@ -48,7 +59,7 @@ class SignUp extends Component {
             
             
         } else {
-            alert("Please fill out all fields before submitting.");
+            this.handleShow();
         }
     }
     createAccount() {
@@ -73,7 +84,7 @@ class SignUp extends Component {
             });
     }
     isFormValid = () => {
-        if (this.state.firstName === '' || this.state.lastName === '' || this.state.email === '' || this.state.password === '') {
+        if (this.state.firstName === '' || this.state.lastName === '' ||  this.state.email === '' || !validator.isEmail(this.state.email) || this.state.password === '') {
             return false;
         } else {
             return true;
@@ -88,7 +99,7 @@ class SignUp extends Component {
                         <div className="col-md-2" />
                         <div className="col-md-8">
                             <h2>Get Started for Free or Level Up With Premium</h2>
-                            <p>With a free Closet account, you can take quizzes and access personalized fashion pins to help cultivate your perfect look. With premium, you enjoy all the great features of a free account, but with access to a stylist who's available to chat at any time along with buy-now buttons to make in-app purchases!</p>
+                            <p>With a free Closet account, you can take quizzes, shop from a photo and access personalized fashion pins to help cultivate your perfect look. With premium, you enjoy all the great features of a free account, but with access to a stylist who's available to chat at any time!</p>
                             <br />
                             <form>
                                 <div className="form-group row">
@@ -124,6 +135,15 @@ class SignUp extends Component {
                                     <div className="col-md-2" />
                                 </div>
                             </form>
+                            <Modal show={this.state.show} onHide={this.handleClose}>
+                                <Modal.Header closeButton>
+                                    <Modal.Body>
+                                        <div>
+                                            <h5 className='row'>Please fill out all fields and provide a valid email address.</h5>
+                                        </div>
+                                    </Modal.Body>
+                                </Modal.Header>
+                            </Modal>
                         </div>
                     </div>
                 </div>

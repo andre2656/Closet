@@ -29,7 +29,7 @@ class LiveChat extends React.Component {
                     <h1>Live Chat</h1>
                 </div>
                 <div className="card" id='uploadCard' >
-                    <div className="card-header">Upload an Outfit to Find Where to Buy It</div>
+                    <div className="card-header">Speak with a Stylist for Real-Time Advice</div>
                     <div className="card-body">
                         <Button variant="primary" type="button" className="btn btn-dark" onClick={this.handleShow}>Chat Now</Button>
 

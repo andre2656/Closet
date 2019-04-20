@@ -1,80 +1,78 @@
-# Create React Express App
+# The Closet
 
-## About This Boilerplate
+Ever feel like you're keeping up with the Joneses? The Closet makes it easy to curate a style that's 100% you — effortlessly! Use our fun quizzes to discover your true style, get inspired by new trends, make easy in-app purchases on items you like, and get closer to owning your dream closet.
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+## About This App
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+This Node/Express/React app is deployed to Heroku here: https://the-closet.herokuapp.com/
 
-## Starting the app locally
+The front-end React app auto-reloads as it's updated via webpack dev server, and the backend Express app auto-reloads independently with nodemon.
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+Two APIs power this app:
+1. Pinterest: https://developers.pinterest.com/docs/getting-started/introduction/
+2. Mirror That Look: https://mirrorthatlook.com/#visual/visual-search-two
 
-```
-npm install
-```
+NPM Packages and Libraries:
+- jQuery: https://jquery.com/
+- React: https://reactjs.org/
+- React-Router-Dom: https://www.npmjs.com/package/react-router-dom
+- Validator: https://www.npmjs.com/package/validator
+- Bootstrap: https://getbootstrap.com/
+- React-Bootstrap: https://react-bootstrap.github.io/
 
-This should install node modules within the server and the client folder.
+This app is comprised of 5 pages. Each is gated with user input validation for secure user access.
 
-While waiting for the dependencies to install, create the MySQL database by running the `motivational_quotes_schema.sql` file inside the `seeds` folder.
+**Marketing Site**
 
-To see this example boilerplate in action, create a `.env` file in the root of this project with the following inside:
-DB_USERNAME=root
-DB_PASSWORD=whateveryourpasswordis
-DB_NAME=motivation_development
-DB_HOST=127.0.0.1
+URL: https://the-closet.herokuapp.com/
 
-After both installations complete, run the following command in your terminal:
+This page is our home page. It's where users would land when searching for our services. It explains them in detail and provides two buttons (one at the top and one at the bottom) to sign up. Additionally, it features a log in navigation bar for repeat users.
 
-```
-npm run seed
-```
+The ordering of elements was adjusted for mobile responsiveness with the use of flexbox.
 
-Then:
+![alt text](https://github.com/andre2656/Closet/blob/master/client/public/images/marketingPage.JPG)
 
-```
-npm start
-```
+**Sign Up**
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+URL: https://the-closet.herokuapp.com/sign-up
 
-## Your assignment
+Upon clicking one of the two sign up buttons on the Marketing Site, the new user is sent to a Sign Up page. The page consists of one form that requests a first name, last name, email and password.
 
-1. One team memeber should create a new Github repo (or use a blank existing one if you have issues already) and push this app into it.
-Copy this folder to somewhere outside of the GitLab repo
-Rename the new folder to your project name. Then initialize it as your repo.
-Then inside that new folder:
+The user then has a choice: Start with a free account or upgrade to a premium account. A premium account offers all the same features as the free account (curated Pinterest pins, quizzes and shop from an uploaded image) with the addition of live chat support with a stylist to assist with in-app purchases and fashion advice.
 
-git init
-git remote add origin git@github.com:YOUR_GITHUB_USERNAME/YOUR_REPO.git
-git push -u origin master
+Those who choose the free account are next sent to the Settings page. Those who sign up for Premium are then sent to a Payment page.
 
-Make sure you are doing your git commands in the root of this app. You don't want this app to be a sub-folder in your repo.
-(When you go to your repo page on github.com, you should see this readme and the list of files, not a single sub-folder.)
+![alt text](https://github.com/andre2656/Closet/blob/master/client/public/images/signOn.JPG)
 
-2. Each team member should verify that they can clone and edit the repo
-Make sure every member is added as a contributor in Github and has accepted the invite.
-Clone the repo.
-Then make a small change to some file, and push your changes to verify that you have access.
+**Payment**
 
-3. Each team member needs to make their own `.env` file in the root of this project with the following inside:
-DB_USERNAME=root
-DB_PASSWORD=whateveryourpasswordis
-DB_NAME=our_group_project_database_name
-DB_HOST=127.0.0.1
+URL: https://the-closet.herokuapp.com/payment
 
-Note that the database name is different than the name used by the example boilerplate, as it is whatever you chose to name your group project's database.  Also be sure to supply your own password!
+The Payment page features a straightforward credit card submission form that's mobile responsive. 
 
-4. Verify that every team member can run the app and see the quotes displayed.
-`npm start`
+Upon clicking Submit with all input fields filled out, the user is directed to the Settings page just as users who opted for a free account were on the last page.
 
-5. As a group, add React Router to App.js.  Be sure to cd into the `client` folder before installing React router (remember, we use `npm` to install libraries).
-Then create a `pages` folder in your `client/src` folder.
-Then create a couple stubs of your primary pages. Add routes to these in your App.js
-Then add navigation Links to these pages.
+![alt text](https://github.com/andre2656/Closet/blob/master/client/public/images/payment.JPG)
 
-6. Go HAM and create your app.
 
-## Deployment (Heroku)
+**Settings**
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+URL: https://the-closet.herokuapp.com/settings
+
+The Settings page asks the user 5 quick questions to help determine their curated Pinterest looks and think about their fashion tastes.
+
+Once all 5 questions are answered via the dropdowns, the user is directed to the main app.
+
+![alt text](https://github.com/andre2656/Closet/blob/master/client/public/images/settings.JPG)
+
+**App**
+
+URL: https://the-closet.herokuapp.com/app
+
+The main app features quizzes to help users identify their fashion style and icon they're most similar to. Their selected settings dictate their curated looks, which feature people who look like them modeling the style they said they admire in others. To the right, there is an upload field to input an image URL and see where to buy items from a picture. They can click on both the Pinterest pictures and the links in the Outfit Details sections to see the pin and buy the item, respectively. 
+
+At the bottom right of the page, users can request Live Chat support from a stylist. Freemium users receive a modal letting them know this feature is a premium feature, with a button to return Sign Up form to upgrade to premium. Premium users can access this feature.
+
+All pages are responsive and all data is stored in MySQL via Sequelize.
+
+![alt text](https://github.com/andre2656/Closet/blob/master/client/public/images/mainApp.JPG)

@@ -4,20 +4,18 @@ import './MarketingSite.css';
 import './Quizzes.css';
 
 const Quizzes = () => {
-    let content = { marginTop: "140px" }
-    let padding = { paddingBottm: "30px" }
     return (
         <div className="container flex-container">
             <div className="row">
-                <div className="col-md-2" />
-                <div className="col-md-4" id="quiz-text" style={content}>
+                <div className="col-md-1" />
+                <div className="col-md-5" id="quiz-text" style={{marginTop: "130px", marginBottom: "60px"}}>
                     <h2>Have Fun With Quizzes</h2>
                     <p>Take quick quizzes to hone in on your dream style and adjust your preferences to see fashion that speaks to you.</p>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-5">
                     <img id="quiz-image" src="images/marketing-site-quiz.jpg" alt= 'quiz' />
                 </div>
-                <div className="col-md-2" style={padding} />
+                <div className="col-md-1"/>
             </div>
         </div>
     )
