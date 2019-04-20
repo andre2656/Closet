@@ -1,18 +1,21 @@
 import React from "react";
 
 const PopularPins = () => {
-    let content = { marginTop: "70px" }
-    return <div className="container">
-        <div className="row">
-            <div className="col-md-1" />
-            <img className="col-md-5" id="pins-image" src="https://farm8.staticflickr.com/7162/6816660823_4c03d9fc89_b.jpg" width={500} height={200} alt= 'Popular Pins' />
-            <div className="col-md-5" style={content}>
-                <h2>See Popular Pins</h2>
-                <p>Your settings will generate Pinterest pins that match your style vision and showcase people who look like you.</p>
+    return (
+        <div className="container">
+            <div className="row">
+                <div className="col-md-1" />
+                <div className="col-md-5">
+                    <img  id="pins-image" src="images/popular-pins.jpg" alt= 'Popular Pins' />
+                </div>
+                <div className="col-md-5" style={{ marginTop: "70px" }}>
+                    <h2>See Popular Pins</h2>
+                    <p>Your settings will generate Pinterest pins that match your style vision and showcase people who look like you.</p>
+                </div>
+                <div className="col-md-1"/>
             </div>
-            <div className="col-md-1"/>
-        </div>
-    </div >
+        </div >
+    )
 }
 
 export default PopularPins;
