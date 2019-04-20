@@ -1,10 +1,11 @@
 import React from "react";
 import loginController from "../../../controllers/LoginController"
-import pinterestController from '../../../controllers/pinterestController'
+import axios from 'axios'
 
 export default class PinterestListItem extends React.Component {
     state = {
         email: '',
+        ethnicity: '',
         board: 'project3-w-fashion/',
         data: ''
     }
@@ -20,26 +21,44 @@ export default class PinterestListItem extends React.Component {
 
         loginController.recheckLogin();
 
-        if ('ethnicity' === 'Black or African American'){
-            this.setState({ board: 'project3-b-fashion'})
-        } else if ('ethnicity' === 'White'){
-            this.setState({ board: 'project3-w-fashion' })
-        } else if ('ethnicity' === 'Asian') {
-            this.setState({ board: 'project3-a-fashion' })
-        } else if ('ethnicity' === 'American Indian') {
-            this.setState({ board: 'project3-ai-fashion' })
-        } else if ('ethnicity' === 'Native Hawaiian or Other Pacific Islander') {
-            this.setState({ board: 'project3-hp-fashion' })
-        } else if ('ethnicity' === 'Hispanic') {
-            this.setState({ board: 'project3-h-fashion' })
-        }else{
-
-        }
-
     }
     getEthnicity = () => {
         console.log('get ethnicity was called')
-        pinterestController.getEthnicity(this.state.email)
+        let ethnicity;
+        axios.get('api/set/ethnicity', {
+            params: {
+                email: this.state.email
+            }
+        }).then(settings => {
+            console.log(settings.data.ethnicity);
+            ethnicity = settings.data.ethnicity
+            console.log('Eth= ' + ethnicity)
+            this.setEthnicity(ethnicity)
+        })
+    }
+    setEthnicity = (ethnicity) => {
+        console.log('eth= ' + ethnicity)
+
+        this.setState({ ethnicity: '' },
+            () => {
+                if (ethnicity === 'Black or African American') {
+                    this.setState({ board: 'project3-b-fashion' })
+                } else if (ethnicity === 'White') {
+                    this.setState({ board: 'project3-w-fashion' })
+                } else if (ethnicity === 'Asian') {
+                    this.setState({ board: 'project3-a-fashion' })
+                } else if (ethnicity === 'American Indian') {
+                    this.setState({ board: 'project3-ai-fashion' })
+                } else if (ethnicity === 'Native Hawaiian or Other Pacific Islander') {
+                    this.setState({ board: 'project3-hp-fashion' })
+                } else if (ethnicity === 'Hispanic') {
+                    this.setState({ board: 'project3-h-fashion' })
+                } else {
+
+                }
+            }
+        )
+
     }
 
     componentWillUnmount() {

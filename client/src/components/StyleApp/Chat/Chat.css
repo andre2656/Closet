@@ -9,3 +9,12 @@
      overflow: scroll 
     
 }
+
+
+#userText{
+    width: 40%;
+    height: auto;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    
+}

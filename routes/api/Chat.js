@@ -28,7 +28,7 @@ router.get('/receive', (req, res) => {
 })
 
 router.get('/stylist', (req, res) => {
-    db.Chat.findAll({}).then(emails => {
+    db.Chat.findAll().then(emails => {
         console.log('Emails have been selected');
         res.json(emails)
     })

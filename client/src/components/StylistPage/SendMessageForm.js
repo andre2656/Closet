@@ -1,14 +1,13 @@
-import React from 'react'
-import axios from 'axios'
-import MessageList from './MessagesList'
-import './Chat.css';
+import React from 'react';
+import axios from 'axios';
+import MessageList from './MessageList';
 
 class SendMessageFrom extends React.Component {
     constructor(props) {
         super(props);
         // Don't call this.setState() here!
         this.state = {
-            email: this.props.email,
+            email: props.email,
             user: false,
             message: '',
             messages: []

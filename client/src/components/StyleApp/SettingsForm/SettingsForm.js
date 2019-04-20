@@ -47,6 +47,7 @@ class SettingsForm extends Component {
 
     signup() {
         console.log("signing up");
+        console.log(this.state)
         axios.post('api/set/settings', {
             email: this.state.email,
             age: this.state.age,

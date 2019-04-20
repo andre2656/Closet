@@ -49,7 +49,7 @@ renderMessages = () => {
         if (!this.state.messages[i].user){
             userMessage.attr('id', 'stylistText');
         } else if (this.state.messages[i].user){
-            userMessage.attr('id', 'userText');
+            userMessage.attr('id', '40userText');
         }
         
 
