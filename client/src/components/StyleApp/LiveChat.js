@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import Chat from './Chat/Index'
 
-class LiveChat extends React.Component {
+class LiveChat extends Component {
     constructor(props, context) {
         super(props, context);
 
@@ -38,19 +39,8 @@ class LiveChat extends React.Component {
                                 <Modal.Title><h1>Live Chat</h1></Modal.Title>
                             </Modal.Header>
                             <Modal.Body>
-                                <div className="form-group row">
-                                    <div className='col-md-2' />
-                                    <div className='col-md-8'>
-                                        <h5 className='row'>Message</h5>
-                                        <input type="message" className="row" id="message" />
-                                    </div>
-                                    <div className='col-md-2' />
-                                </div>
+                                <Chat />
                             </Modal.Body>
-                            <Modal.Footer>
-                                <Button variant="secondary" type="button" className="btn btn-dark" onClick={this.handleClose}>Close</Button>
-                                <Button variant="primary" type="button" className="btn btn-dark" onClick={this.handleClose}>Send Message</Button>
-                            </Modal.Footer>
                         </Modal>
                     </div>
                 </div>

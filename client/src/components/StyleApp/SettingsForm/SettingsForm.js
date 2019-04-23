@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
-import loginController from "../../../controllers/LoginController"
-
+import loginController from "../../../controllers/LoginController";
 import { Modal } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 
 
 
@@ -129,7 +126,6 @@ class SettingsForm extends Component {
                                         </select>
                                     </div>
                                 </div>
-
                                 <div className="form-group row">
                                     <label for="question3" className="col-sm-6 col-form-label">What's your hair color?</label>
                                     <div className="col-sm-6">
@@ -182,7 +178,7 @@ class SettingsForm extends Component {
                                         </div>
                                     </Modal.Body>
                                 </Modal.Header>
-                            </Modal> 
+                            </Modal>
                         </div>
                     </div>
                 </div>
@@ -190,7 +186,6 @@ class SettingsForm extends Component {
 
         );
     }
-
 };
 
 export default SettingsForm;

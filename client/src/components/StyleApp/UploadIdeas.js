@@ -3,7 +3,6 @@ import './UploadIdeas.css';
 import Recognition from './StyleRecognition/StyleRecognition';
 import validator from 'validator';
 import { Modal } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 
 class UploadIdeas extends Component {
     state = {
@@ -63,7 +62,7 @@ class UploadIdeas extends Component {
                     </div>
                     <div className="card" id='uploadCard' >
                         <div className="card-header">Upload a Photo Above for Updated Results</div>
-                        <div className="card-body" id="outfitResults" style={{ height: "400px", overflow: "scroll" }}>
+                        <div className="card-body" id="outfitResults" style={{ height: "400px", overflow: "scroll"}}>
                             <Recognition
                                 img={this.state.image}
                             />

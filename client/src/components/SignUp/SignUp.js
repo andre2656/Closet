@@ -3,7 +3,6 @@ import axios from 'axios';
 import NavBar from '../NavBar/NavBar';
 import './SignUp.css';
 import { Modal } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 import validator from 'validator';
 
 
@@ -49,7 +48,7 @@ class SignUp extends Component {
     handlePremiumClick = () => {
         if (this.isFormValid()) {
             this.setState({
-                premium: true
+                premium: false
             },
             () => {
                 console.log(this.state.premium);
