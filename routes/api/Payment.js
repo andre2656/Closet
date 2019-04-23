@@ -15,6 +15,18 @@ router.post("/payments", (req, res) => {
         res.json({ message: "Card Saved" });
     })
 });
+router.get('/premium', (req, res) => {
+    db.Payment.findAll({
+        where: { email: req.query.email }
+    }).then(premium => {
+        if (!premium){
+            res.json(premium)
+        }else{
+            res.json(premium)
+        }
+        
+    })
+})
 
 
 module.exports = router;

@@ -48,7 +48,7 @@ class SignUp extends Component {
     handlePremiumClick = () => {
         if (this.isFormValid()) {
             this.setState({
-                premium: false
+                premium: true
             },
             () => {
                 console.log(this.state.premium);
