@@ -82,7 +82,7 @@ class StyleApp extends React.Component {
                                         <div className='col-md-6'>
                                                 <UploadIdeas />
                                                 <br />
-                                                <LiveChat />
+                                                {this.getChat}
                                         </div>
                                 </div>
                         </div>
