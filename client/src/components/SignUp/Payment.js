@@ -2,11 +2,8 @@ import React, { Component } from "react";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Payment.css';
-
 import loginController from "../../controllers/LoginController"
-
 import { Modal } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 
 
 class Payment extends Component {
@@ -125,9 +122,9 @@ class Payment extends Component {
                         </div>
                         <div className="col-md-1" />
 
-                            <img className="col-md-1 card-image" id="visa" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Visa_%28company%29_logo.svg" width={60} height={37} alt='Visa' />
-                            <img className="col-md-1 card-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" width={45} height={39} alt='Mastercard' />
-                            <img className="col-md-1 card-image" src="https://cdn2.iconfinder.com/data/icons/credit-cards-6/156/american_express-512.png" width={60} height={50} alt='American-Express' />
+                        <img className="col-md-1 card-image" id="visa" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Visa_%28company%29_logo.svg" width={60} height={37} alt='Visa' />
+                        <img className="col-md-1 card-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" width={45} height={39} alt='Mastercard' />
+                        <img className="col-md-1 card-image" src="https://cdn2.iconfinder.com/data/icons/credit-cards-6/156/american_express-512.png" width={60} height={50} alt='American-Express' />
                         <div className="col-md-3" />
 
                     </div>

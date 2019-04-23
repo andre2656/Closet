@@ -1,13 +1,13 @@
 import React from 'react';
-import Stylist from './Stylist';
 import axios from 'axios';
 import $ from 'jquery';
-
+import SendMessageForm from './SendMessageForm';
 
 class MessageNav extends React.Component {
     state = {
         email: 'sample@email.com',
         emails: [],
+        filteredEmails: [],
     }
 
     componentDidMount() {
@@ -16,7 +16,6 @@ class MessageNav extends React.Component {
     getEmails = () => {
         axios.get('/api/chat/stylist', {
         }).then((response) => {
-            // console.log(response)
             this.setState({ emails: response.data },
                 () => {
                     this.appendEmails();
@@ -28,7 +27,7 @@ class MessageNav extends React.Component {
     }
 
     appendEmails = () => {
-    //     $('.listOFEmail').empty();
+        //     $('.listOFEmail').empty();
         let emailsArray = []
         for (let i = 0; i < this.state.emails.length; i++) {
             emailsArray.push(this.state.emails[i].email);
@@ -38,39 +37,48 @@ class MessageNav extends React.Component {
             return self.indexOf(value) === index;
         }
         let filteredEmails = emailsArray.filter(onlyUnique)
-        console.log(filteredEmails)
-        this.setState({emails: filteredEmails})
+        this.setState({ filteredEmails: filteredEmails })
+
         for (let t = 0; t < filteredEmails.length; t++) {
             let button = $('<button>');
             button.attr('id', filteredEmails[t]);
             button.attr('value', filteredEmails[t]);
             button.append(filteredEmails[t]);
-            button.addClass('btn')
-            button.filter()
+            button.addClass('btn');
+            button.filter();
+            button.attr('id', 'buttons')
             // button.attr(onClick, {this.setEmail})
             $('.listOfEmails').append(button)
         }
-        $('button').on('click', (event) => {
-            event.preventDefault()
-            console.log(event.target.value)
-            this.setState({email: event.target.value}
-                )
+        $('button').click((event) => {
+            this.setState({ email: event.target.value },
+                () => {
+                    this.getMessages()
+                })
         })
     }
-    
-            
-
+    getMessages = () => {
+        axios.get('/api/chat/receive/', {
+            params: {
+                email: this.state.email
+            }
+        }).then((response) => {
+            this.setState({ messages: response.data })
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }
     render() {
-        return (
-            <div className='stylistPage'>
-                <div className='listOfEmails'>
-                    {/* append emails into buttons of a tags. onClick= {this.setEmail} //sets email to whatever email clicked...  */}
-                </div>
 
-                {/* <Stylist
-                email= {this.state.email}
-               /> */}
+        return (
+            <div>
+                <div className='stylistPage'>
+                    <div className='listOfEmails'></div>
+                    <SendMessageForm
+                        email={this.state.email}/>
+                </div>
             </div>
+
         )
     }
 }

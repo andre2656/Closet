@@ -16,10 +16,8 @@ componentDidMount (){
 
 componentDidUpdate = (prevProps) => {
     if (prevProps.messages.length !== this.props.messages.length){
-        console.log('component did update')
         this.setState({ messages: this.props.messages },
             () => {
-                console.log(this.state.messages)
                 this.renderMessages();
             })  
     }
@@ -35,35 +33,38 @@ renderMessages = () => {
     for (let i= 0; i < this.state.messages.length; i++){
        
         let userMessage = $('<p>');
-        let emailDiv = $('<div>');
+        let emailText = $('<p>');
         let messageDiv = $('<div>');
         // console.log(this.state.messages[i]);
         
-        emailDiv.text(this.state.messages[i].email);
-        messageDiv.text(this.state.messages[i].message);
+        
+        userMessage.text(this.state.messages[i].message);
 
-        userMessage.addClass('col-md-12');
-        userMessage.append(messageDiv);
-        userMessage.append(emailDiv);
-
+        
+        
         if (!this.state.messages[i].user){
+            emailText.text('Your Stylist');
             userMessage.attr('id', 'stylistText');
+            emailText.attr('id', 'emailStylistText');
         } else if (this.state.messages[i].user){
-            userMessage.attr('id', '40userText');
+            emailText.text(this.state.messages[i].email);
+            userMessage.attr('id', 'userText');
+            emailText.attr('id', 'emailUserText');
         }
+       
+        messageDiv.addClass('col-md-12');
+        messageDiv.append(userMessage);
+        messageDiv.append(emailText);
         
-
-        
-        $('#message-list').append(userMessage);
-
+       
+        let messageList = $('#message-list')
+        messageList.append(messageDiv);
+        $("#message-list").scrollTop($("#message-list")[0].scrollHeight);
     }
 }
     render() {
         return (
-            <div id='message-list' >
-                
-            </div>
-            
+            <div id='message-list' ></div>
         )
     }
 }

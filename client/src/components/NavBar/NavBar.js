@@ -3,7 +3,6 @@ import { Redirect, withRouter } from 'react-router-dom';
 import './NavBar.css';
 import loginController from '../../controllers/LoginController';
 import { Modal } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 
 class NavBar extends Component {
   state = {

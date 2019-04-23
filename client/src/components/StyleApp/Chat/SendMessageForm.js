@@ -71,14 +71,11 @@ class SendMessageFrom extends React.Component {
     render() {
         return (
             <div>
-                <MessageList
-                    messages={this.state.messages}
-                />
-                <div className= 'col-md-12'>
-                    <input id='chatInput' style={{ marginRight: "5px" }} type="text" onChange={this.messageChanged} value={this.state.message} />
-                    <button onClick={this.submitClicked} type='submit' className="btn btn-dark btn-file">Send</button>
+                <MessageList messages={this.state.messages} />
+                <div className= 'row col-md-12'>
+                    <textarea id='chatInput' style={{ width: '80%', height: '100px' }} type="text" onChange={this.messageChanged} value={this.state.message} />
+                    <button id= 'chatSubmit' onClick={this.submitClicked} type='submit' className="" style= {{backgroundImage: 'url(images/sendButton.jpg)', backgroundSize: '40px 40px', backgroundPosition: 'center center'}}></button>
                 </div>
-                
             </div>
 
         )

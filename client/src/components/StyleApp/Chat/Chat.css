@@ -1,20 +1,48 @@
 #message-list{
-    /* float:left;
-    width: 100%;
-    height: auto;
-    max-width: 100px;
-    max-height: 200px; */
-
      height: 400px;
-     overflow: scroll 
-    
+     overflow: scroll ;
 }
-
-
+#listOfEmails{
+     height: auto;
+     width: auto;
+     overflow-x: scroll ;
+}
 #userText{
-    width: 40%;
+    width: auto;
+    max-width: 65%;
+    margin-left: 35%;
     height: auto;
     background-color: lightskyblue;
-    border-radius: 10px;
-    
+    border-radius: 15px;
+}
+#stylistText{
+    width: auto;
+    max-width: 65%;
+    height: auto;
+    background-color: #e3e3e9;
+    border-radius: 15px;
+}
+#emailUserText{
+    margin-top: -15px;
+    padding-left: 35%;
+    font-size: 12px;
+    font-family: 'Poiret One', cursive;
+}
+#emailStylistText{
+    margin-top: -15px;
+    padding-right: 35%;
+    font-size: 12px;
+    font-family: 'Poiret One', cursive;
+}
+#chatSubmit{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: -25;
+    border: #000 1px solid
+}
+#chat-input{
+    margin-right: 25px
 }

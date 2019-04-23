@@ -7,14 +7,11 @@ class SendMessageFrom extends React.Component {
         super(props);
         // Don't call this.setState() here!
         this.state = {
-            email: props.email,
+            email: '',
             user: false,
             message: '',
             messages: []
         };
-    }
-    componentDidMount() {
-        this.getMessages();
     }
 
     messageChanged = (event) => {
@@ -25,7 +22,15 @@ class SendMessageFrom extends React.Component {
         this.sendMessage();
         this.setState({ message: '' });
     }
-
+    componentDidUpdate = (prevProps) => {
+        if (prevProps.email !== this.props.email) {
+            this.setState({ email: this.props.email },
+                () => {
+                    console.log(this.state.email)
+                    this.getMessages()
+                })
+        }
+    }
 
     sendMessage = () => {
         console.log('send messgae');
@@ -34,7 +39,8 @@ class SendMessageFrom extends React.Component {
             message: this.state.message,
             user: this.state.user
         }).then((response) => {
-            this.setState({ messages: response.data })
+            this.setState({ messages: response.data });
+            this.setState({ message: '' })
         })
             .catch(function (error) {
                 console.log(error);
@@ -51,23 +57,16 @@ class SendMessageFrom extends React.Component {
         }).catch(function (error) {
             console.log(error);
         });
-
     }
-
-
     render() {
         return (
-            <div>
-                <MessageList
-                    messages={this.state.messages}
-                />
-                <div className='col-md-12'>
-                    <input id='chatInput' style={{ marginRight: "5px" }} type="text" onChange={this.messageChanged} value={this.state.message} />
-                    <button onClick={this.submitClicked} type='submit' className="btn btn-dark btn-file">Send</button>
+            <div style= {{ marginLeft: '20%', width: '80%' }}>
+                <MessageList messages={this.state.messages}/>
+                <div className='row col-md-12' >
+                    <textarea id='chatInput' style={{ width: '80%', height: '100px' }} type="text" onChange={this.messageChanged} value={this.state.message} />
+                    <button id='chatSubmit' onClick={this.submitClicked} type='submit' className="" style={{ backgroundImage: 'url(images/sendButton.jpg)', backgroundSize: '40px 40px', backgroundPosition: 'center center' }}></button>
                 </div>
-
             </div>
-
         )
     }
 }
