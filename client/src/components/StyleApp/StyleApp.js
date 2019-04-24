@@ -59,7 +59,7 @@ class StyleApp extends React.Component {
                 switch (this.state.premium) {
 
                         case true: return <LiveChat />;
-                        // default: return <NonLiveChat />;
+                        default: return <NonLiveChat />;
                 };
         };
 
