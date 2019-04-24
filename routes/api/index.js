@@ -3,7 +3,8 @@ const User = require('./User');
 const Settings = require('./Settings');
 const Payment = require('./Payment');
 const apiRoutes = require('./apiRoutes');
-const Chat = require('./Chat')
+const Chat = require('./Chat');
+const stylist = require ('./Stylist');
 
 /**
  * API routes 
@@ -26,5 +27,7 @@ router.use('/pay', Payment);
 router.use('/api', apiRoutes);
 
 router.use('/chat', Chat);
+
+router.use('/stylist', stylist);
 
 module.exports = router;

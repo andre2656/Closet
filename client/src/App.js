@@ -8,7 +8,7 @@ import SettingsForm from './components/StyleApp/SettingsForm/SettingsForm';
 import Payment from './components/SignUp/Payment';
 import IconQuiz from './components/Quizzes/IconQuiz/IconQuiz';
 import Chat from './components/StyleApp/Chat/Index.js'
-import stylistChat from './components/StylistPage/MessageNav'
+import stylistChat from './components/StylistPage/passwordStylist'
 import FashionStyleQuiz from './components/Quizzes/FashionStyleQuiz/FashionStyleQuiz';
 import loginController from "./controllers/LoginController";
 import SkinToneQuiz from "./components/Quizzes/SkinToneQuiz/SkinToneQuiz";
