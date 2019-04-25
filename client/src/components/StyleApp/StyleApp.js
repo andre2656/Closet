@@ -4,6 +4,7 @@ import NavId from './NavId';
 import Pinterest from './Pinterest/Pinterest'
 import UploadIdeas from './UploadIdeas';
 import LiveChat from './LiveChat';
+import NonLiveChat from './NonLiveChat'
 import Axios from 'axios';
 import loginController from '../../controllers/LoginController'
 
@@ -40,13 +41,13 @@ class StyleApp extends React.Component {
                                 this.setState({ premium: false },
                                         () => {
                                                 console.log(this.state.premium)
-                                                this.getChat();
+                                               
                                         });
                         } else {
                                 this.setState({ premium: true },
                                         () => {
                                                 console.log(this.state.premium)
-                                                this.getChat();
+                                               
                                         });
                         }
 
@@ -64,6 +65,7 @@ class StyleApp extends React.Component {
         };
 
         render() {
+
                 return (
                         <div>
                                 <NavId />
@@ -82,7 +84,7 @@ class StyleApp extends React.Component {
                                         <div className='col-md-6'>
                                                 <UploadIdeas />
                                                 <br />
-                                                {/* {this.state.premuim ? <LiveChat/> : <NonLiveChat/>} */}
+                                                {this.state.premium ? <LiveChat/> : <NonLiveChat/>}
                                         </div>
                                 </div>
                         </div>

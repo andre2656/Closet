@@ -26,18 +26,12 @@ class MessageList extends React.Component {
 
 
     renderMessages = () => {
-
-        // text.empty();
-        // emailDiv.empty();
-        // messageDiv.empty();
         $('#message-list').empty();
         for (let i = 0; i < this.state.messages.length; i++) {
 
             let userMessage = $('<p>');
             let emailDiv = $('<div>');
             let messageDiv = $('<div>');
-            // console.log(this.state.messages[i]);
-
            
             messageDiv.text(this.state.messages[i].message);
 
@@ -61,10 +55,7 @@ class MessageList extends React.Component {
     }
     render() {
         return (
-            <div id='message-list' >
-
-            </div>
-
+            <div id='message-list' ></div>
         )
     }
 }

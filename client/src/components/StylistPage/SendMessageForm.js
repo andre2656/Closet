@@ -64,7 +64,7 @@ class SendMessageFrom extends React.Component {
                 <MessageList messages={this.state.messages}/>
                 <div className='row col-md-12' >
                     <textarea id='chatInput' style={{ width: '80%', height: '100px' }} type="text" onChange={this.messageChanged} value={this.state.message} />
-                    <button id='chatSubmit' onClick={this.submitClicked} type='submit' className="" style={{ backgroundImage: 'url(images/sendButton.jpg)', backgroundSize: '40px 40px', backgroundPosition: 'center center' }}></button>
+                    <a onClick={this.submitClicked} type='submit' className="" style={{ width: '0px', height: '0px'}}><label id='chatSubmit' style={{ backgroundImage: 'url(images/sendButton.jpg)', backgroundSize: '40px 40px', backgroundPosition: 'center center' }}></label></a>
                 </div>
             </div>
         )
