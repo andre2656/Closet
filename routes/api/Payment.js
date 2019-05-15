@@ -11,7 +11,6 @@ router.post("/payments", (req, res) => {
         month: req.body.month,
         year: req.body.year,
     }).then(() => {
-        console.log('Settings Added!')
         res.json({ message: "Card Saved" });
     })
 });

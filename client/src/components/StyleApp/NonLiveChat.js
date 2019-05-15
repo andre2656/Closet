@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Modal } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-
+import { Link } from 'react-router-dom';
 class NonLiveChat extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -49,6 +49,7 @@ class NonLiveChat extends React.Component {
                             </Modal.Body>
                             <Modal.Footer>
                                 <Button variant="secondary" type="button" className="btn btn-dark" onClick={this.handleClose}>Close</Button>
+                                <Link to='/payment'><Button variant="secondary" type="button" className="btn btn-dark" onClick={this.handleClose}>Unlock Premium</Button></Link>
                             </Modal.Footer>
                         </Modal>
                     </div>

@@ -23,9 +23,8 @@ class StyleRecognition extends React.Component {
             $.ajax({
                 url: "https://api.mirrorthatlook.com/v2/mirrorthatlook?" + $.param(params),
                 beforeSend: function (xhrObj) {
-                    // Request headers
-                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "");
-                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", "0a37d052f5a240829ef1d12f5f06e6ec");
+                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", '');
+                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", '6cd86d1fe2914c8786ac7ee9f7c4a41c');
                 },
                 type: "GET",
                 data: "{body}",
@@ -59,7 +58,7 @@ class StyleRecognition extends React.Component {
     }
     componentDidMount = () => {
         this.setState({ img: this.props.img });
-        this.getImages();
+        // this.getImages();
     };
     render() {
         return (

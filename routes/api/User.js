@@ -53,8 +53,8 @@ setLoginCookie= (user, req, res) => {
 
 router.post("/sign-up", (req, res) => {
     const {email, password} = req.body;
-    console.log("registering", email, password);
-    console.log("registering");
+    // console.log("registering", email, password);
+    // console.log("registering");
 
     // TODO: Validate username & password. Make sure they're long enough / secure enough
 

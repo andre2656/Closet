@@ -11,7 +11,6 @@ module.exports = {
             })
             .then(dbModel => {
                 res.json(dbModel);
-                console.log(dbModel)
             });
     }
 };

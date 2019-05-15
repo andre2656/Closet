@@ -13,7 +13,6 @@ router.post("/send", (req, res) => {
         db.Chat.findAll({
             where: { email: req.body.email }
         }).then(messages => {
-            console.log(messages)
             res.json(messages)
         })
     })
@@ -29,7 +28,6 @@ router.get('/receive', (req, res) => {
 
 router.get('/stylist', (req, res) => {
     db.Chat.findAll().then(emails => {
-        console.log('Emails have been selected');
         res.json(emails)
     })
 })
