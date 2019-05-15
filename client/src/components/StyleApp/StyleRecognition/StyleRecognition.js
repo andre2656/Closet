@@ -10,7 +10,7 @@ class StyleRecognition extends React.Component {
     componentWillReceiveProps = (props) => {
         this.setState({ img: props.img },
             () => {
-                // this.getImages();
+                this.getImages();
             })
     }
     getImages = () => {
