@@ -36,26 +36,15 @@ class StyleApp extends React.Component {
                                 email: this.state.email
                         }
                 }).then((response) => {
-                        let emptyArray = []
-                        if (response.data === emptyArray) {
-                                this.setState({ premium: false },
-                                        () => {
-                                                console.log(this.state.premium)
-                                               
-                                        });
+                        if (response.data.length === 0) {
+                                this.setState({ premium: false });
                         } else {
-                                this.setState({ premium: true },
-                                        () => {
-                                                console.log(this.state.premium)
-                                               
-                                        });
+                                this.setState({ premium: true });
                         }
-
                 }).catch(function (error) {
                         console.log(error);
                 });
         }
-
         getChat = () => {
                 switch (this.state.premium) {
 
@@ -63,7 +52,6 @@ class StyleApp extends React.Component {
                         default: return <NonLiveChat />;
                 };
         };
-
         render() {
 
                 return (

@@ -14,7 +14,6 @@ class SendMessageFrom extends React.Component {
     }
     componentDidMount() {
         loginController.addUserChangedListener(this.setUser);
-        loginController.recheckLogin();
     }
 
     componentWillUnmount() {
@@ -45,8 +44,6 @@ class SendMessageFrom extends React.Component {
             message: this.state.message,
             user: this.state.user
         }).then((response) => {
-                // console.log(response.data);
-                // this.getMessages();
                 this.setState({ messages: response.data })
             })
             .catch(function (error) {

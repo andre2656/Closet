@@ -70,7 +70,6 @@ class SignUp extends Component {
             premium: this.state.premium
         })
             .then((response) => {
-                console.log(response);
                 if (this.state.premium) {
                     window.location.pathname = "/payment";
                 }else{

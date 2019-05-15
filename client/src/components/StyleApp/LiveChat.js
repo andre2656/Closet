@@ -33,7 +33,6 @@ class LiveChat extends Component {
                     <div className="card-header">Speak with a Stylist for Real-Time Advice</div>
                     <div className="card-body">
                         <Button variant="primary" type="button" className="btn btn-dark" onClick={this.handleShow}>Chat Now</Button>
-
                         <Modal show={this.state.show} onHide={this.handleClose}>
                             <Modal.Header closeButton>
                                 <Modal.Title><h1>Live Chat</h1></Modal.Title>

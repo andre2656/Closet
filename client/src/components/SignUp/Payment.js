@@ -19,7 +19,6 @@ class Payment extends Component {
     componentDidMount() {
         console.log("componentDidMount");
         loginController.addUserChangedListener(this.setUser);
-
         loginController.recheckLogin();
     }
 
@@ -29,7 +28,6 @@ class Payment extends Component {
     }
 
     setUser = (user) => {
-        console.log('setUser Email- ' + user.user.email);
         this.setState({ email: user.user.email });
     }
 
@@ -66,13 +64,26 @@ class Payment extends Component {
             month: this.state.month,
             year: this.state.year,
         })
-            .then(function (response) {
-                console.log(response);
-                window.location.pathname = "/settings";
+            .then((response) => {
+                this.checkPage(response);
             })
             .catch(function (error) {
                 console.log(error);
             });
+    }
+    checkPage = (response) => {
+        axios.get('/api/set/ethnicity', {
+            params: {
+                email: this.state.email
+            }
+        }).then(settings => {
+            console.log(settings)
+            if (settings.data === null) {
+                window.location.pathname = "/settings";
+            } else {
+                window.location.pathname = "/app";
+            }
+        })
     }
 
     InputValidation = (event) => {
@@ -81,7 +92,6 @@ class Payment extends Component {
         if (this.state.cardholderName === '' || this.state.cvv === '' || this.state.cardNumber === '' || this.state.month === '' || this.state.year === '') {
             this.handleShow();
         } else {
-            console.log("submitting payment details");
             this.submitPayment();
         }
     }
