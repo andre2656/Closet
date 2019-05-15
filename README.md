@@ -4,7 +4,7 @@ Ever feel like you're keeping up with the Joneses? The Closet makes it easy to c
 
 ## About This App
 
-This Node/Express/React app is deployed to Heroku here: https://the-closet.herokuapp.com/
+This Node/Express/React app is deployed to Heroku here: https://the-closet-app.herokuapp.com/
 
 The front-end React app auto-reloads as it's updated via webpack dev server, and the backend Express app auto-reloads independently with nodemon.
 
