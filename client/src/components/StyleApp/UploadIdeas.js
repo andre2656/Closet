@@ -6,7 +6,7 @@ import { Modal } from 'react-bootstrap';
 
 class UploadIdeas extends Component {
     state = {
-        image: 'http://wachabuy.com/wp-content/uploads/2017/09/fall-outfit-ideas-olive-bell-sleeve-knit-ripped-denim-436x1024.jpg',
+        image: '',
         img: '',
         getImage: null
     };
@@ -49,7 +49,8 @@ class UploadIdeas extends Component {
                     <div className="card-body">
 
                         <div className='row' style={{ justifyContent: "center" }}>
-                            <input id='imageUrl' style={{ marginRight: "5px" }} type="text" onChange={this.imageChanged} value={this.state.img} /> <button onClick={this.buttonClicked} type='submit' className="btn btn-dark btn-file">Upload Image URL</button>
+                            <input id='imageUrl' style={{ marginRight: "5px" }} type="text" onChange={this.imageChanged} value={this.state.img} /> 
+                            <button onClick={this.buttonClicked} type='submit' className="btn btn-dark btn-file">Upload Image URL</button>
 
                         </div>
 
