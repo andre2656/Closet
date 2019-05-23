@@ -24,7 +24,7 @@ class StyleRecognition extends React.Component {
                 url: "https://api.mirrorthatlook.com/v2/mirrorthatlook?" + $.param(params),
                 beforeSend: function (xhrObj) {
                     xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", '');
-                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", '6cd86d1fe2914c8786ac7ee9f7c4a41c');
+                    xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", 'ee49e91b55354cd2a1f10f49bc6e1d3b');
                 },
                 type: "GET",
                 data: "{body}",
