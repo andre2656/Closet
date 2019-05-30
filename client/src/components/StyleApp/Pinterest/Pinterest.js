@@ -1,11 +1,11 @@
 import React from "react";
-import loginController from "../../../controllers/LoginController"
-import axios from 'axios'
+import loginController from "../../../controllers/LoginController";
+import axios from 'axios';
 
 export default class PinterestListItem extends React.Component {
     state = {
         email: '',
-        board: 'project3-w-fashion/',
+        board: '',//project3-w-fashion/
         data: ''
     }
     componentDidMount() {
