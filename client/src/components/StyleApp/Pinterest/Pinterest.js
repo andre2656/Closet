@@ -36,11 +36,11 @@ export default class PinterestListItem extends React.Component {
         } else if (ethnicity === 'Asian') {
             this.setState({ board: 'our-styles-for-you' })
         } else if (ethnicity === 'American Indian') {
-            this.setState({ board: 'your-looks' })
+            this.setState({ board: 'look-inspiration' })
         } else if (ethnicity === 'Native Hawaiian or Other Pacific Islander') {
             this.setState({ board: 'looks-for-you' })
         } else if (ethnicity === 'Hispanic') {
-            this.setState({ board: 'look-inspiration' })
+            this.setState({ board: 'your-looks' })
         } else {
 
         }
