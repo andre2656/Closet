@@ -30,17 +30,17 @@ export default class PinterestListItem extends React.Component {
     }
     setEthnicity = (ethnicity) => {
         if (ethnicity === 'Black or African American') {
-            this.setState({ board: 'project3-b-fashion' })
+            this.setState({ board: 'styles-for-you' })
         } else if (ethnicity === 'White') {
-            this.setState({ board: 'project3-w-fashion' })
+            this.setState({ board: 'your-styles' })
         } else if (ethnicity === 'Asian') {
-            this.setState({ board: 'project3-a-fashion' })
+            this.setState({ board: 'our-styles-for-you' })
         } else if (ethnicity === 'American Indian') {
-            this.setState({ board: 'project3-ai-fashion' })
+            this.setState({ board: 'look-inspiration' })
         } else if (ethnicity === 'Native Hawaiian or Other Pacific Islander') {
-            this.setState({ board: 'project3-hp-fashion' })
+            this.setState({ board: 'looks-for-you' })
         } else if (ethnicity === 'Hispanic') {
-            this.setState({ board: 'project3-h-fashion' })
+            this.setState({ board: 'your-looks' })
         } else {
 
         }
