@@ -5,7 +5,7 @@ import axios from 'axios';
 export default class PinterestListItem extends React.Component {
     state = {
         email: '',
-        board: 'your-styles',//project3-w-fashion/
+        board: 'our-styles-for-you',//project3-w-fashion/
         data: ''
     }
     componentDidMount() {
