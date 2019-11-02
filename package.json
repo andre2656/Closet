@@ -34,7 +34,7 @@
     "mysql2": "^1.6.5",
     "node-pinterest": "0.0.4",
     "request-promise": "^4.2.4",
-    "sequelize": "^5.2.6",
+    "sequelize": "^5.15.1",
     "validator": "^10.11.0"
   },
   "engines": {
