@@ -35,7 +35,7 @@
     "node-pinterest": "0.0.4",
     "request-promise": "^4.2.4",
     "sequelize": "^5.2.6",
-    "validator": "^10.11.0"
+    "validator": "^13.7.0"
   },
   "engines": {
     "node": "11.6.0",
